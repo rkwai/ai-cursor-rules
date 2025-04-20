@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# General Coding Standards & Best Practices
+
+## Naming Conventions
+- Use `camelCase` for variables and function names.
+- Use `PascalCase` for class names, React component names, and TypeScript type/interface names.
+- Use `UPPER_SNAKE_CASE` for constants.
+- Choose descriptive and meaningful names. Avoid overly short or cryptic names (e.g., prefer `userProfile` over `up`).
+
+## Code Style & Formatting
+- Maintain consistent indentation (usually 2 or 4 spaces, follow project convention if established).
+- Keep lines reasonably short (e.g., under 100-120 characters) for readability.
+- Use Prettier or an established project linter/formatter if available. If generating code, try to match the surrounding style.
+- Avoid commented-out code blocks; remove unused code.
+
+## Comments
+- Write comments to explain the *why*, not the *what*. Explain complex logic, assumptions, or the purpose behind a non-obvious piece of code.
+- Avoid explaining code that is self-evident from good naming.
+- Use `// TODO:` for tasks that need completion.
+- Use `// FIXME:` for known issues that need fixing.
+- Add JSDoc / TSDoc comments for functions, classes, and complex types, explaining parameters, return values, and purpose.
+
+## Error Handling
+- Implement robust error handling using `try...catch` blocks for operations that might fail (e.g., API calls, file system operations).
+- Avoid catching generic `Error`. Catch specific error types where possible.
+- Provide meaningful error messages.
+- Don't swallow errors silently unless there's a very specific, documented reason. Log errors appropriately.
+
+## Principles
+- Adhere to the DRY (Don't Repeat Yourself) principle. Refactor repeated logic into reusable functions or components.
+- Keep functions and components focused on a single responsibility (Single Responsibility Principle).
+- Avoid magic numbers and strings. Define them as named constants.
+- Prioritize readability and maintainability. Write code for humans first.

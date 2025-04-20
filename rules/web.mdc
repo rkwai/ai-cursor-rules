@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Web Development (HTML, CSS, JS) Rules
+
+## HTML
+- **Semantic HTML:** Use appropriate HTML5 semantic elements (`<header>`, `<footer>`, `<nav>`, `<article>`, `<section>`, `<aside>`, etc.) to structure content meaningfully.
+- **Accessibility (A11y):**
+    - Use `alt` attributes for all `<img>` tags. Provide descriptive text for informative images and empty `alt=""` for decorative images.
+    - Ensure interactive elements (buttons, links) are focusable and have clear focus indicators.
+    - Use ARIA attributes (`role`, `aria-label`, `aria-labelledby`, etc.) where necessary to enhance accessibility, especially for custom components or complex widgets.
+    - Ensure sufficient color contrast between text and background.
+- **Forms:** Use `<label>` elements correctly associated with form controls (`<input>`, `<textarea>`, `<select>`).
+
+## CSS
+- **Prefer CSS Classes:** Use CSS classes for styling rather than inline styles (`style` attribute) or IDs (`#id`) for styling (IDs are mainly for JS hooks or page fragments).
+- **Naming Conventions:** Use a consistent naming convention (e.g., BEM - Block, Element, Modifier, or `kebab-case`).
+- **Specificity:** Keep CSS specificity low to avoid conflicts and make overrides easier. Avoid overly nested selectors.
+- **Units:** Use relative units (like `rem`, `em`, `%`, `vw`/`vh`) for responsive design where appropriate. Use `px` for elements that should not scale (like borders).
+- **Responsiveness:** Design with mobile-first principles in mind. Use media queries (`@media`) to adapt layouts for different screen sizes.
+- **Tailwind CSS (If Used):**
+    - Utilize Tailwind utility classes extensively for styling.
+    - Avoid creating custom CSS for things easily achievable with Tailwind utilities.
+    - Use `@apply` sparingly, primarily for complex component abstractions or to group repeated utility patterns if necessary, but prefer component encapsulation in frameworks.
+    - Configure `tailwind.config.js` to customize theme (colors, spacing, fonts) rather than overriding utilities directly in CSS.
+
+## JavaScript (Browser)
+- **DOM Manipulation:** If not using a framework like React/Vue/Angular, manipulate the DOM efficiently. Minimize direct style manipulation in JS; prefer toggling CSS classes.
+- **Event Handling:** Use `addEventListener` instead of inline event handlers (`onclick`). Use event delegation for handling events on multiple similar elements efficiently. Remember to remove event listeners when elements are removed or components unmount to prevent memory leaks.
+- **Asynchronous Operations:** Use `async/await` for handling Promises. Handle potential errors with `try...catch`.

@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Git & Version Control Rules
+
+## Commit Messages
+- **Conventional Commits:** Follow the Conventional Commits specification (https://www.conventionalcommits.org/). The basic format is:
+  ```
+  <type>[optional scope]: <description>
+
+  [optional body]
+
+  [optional footer(s)]
+  ```
+- **Types:** Use standard types like:
+    - `feat`: A new feature
+    - `fix`: A bug fix
+    - `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation
+    - `refactor`: A code change that neither fixes a bug nor adds a feature
+    - `perf`: A code change that improves performance
+    - `test`: Adding missing tests or correcting existing tests
+    - `build`: Changes that affect the build system or external dependencies
+    - `ci`: Changes to CI configuration files and scripts
+    - `docs`: Documentation only changes
+    - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **Description:** Use imperative, present tense ("add feature" not "added feature" or "adds feature"). Keep the description concise (e.g., under 50-72 characters). Do not capitalize the first letter. Do not end with a period.
+- **Body (Optional):** Provide additional context, motivation for the change, or contrast with previous behavior. Use bullet points if needed. Wrap lines at 72 characters.
+- **Footer (Optional):** Reference issue numbers (e.g., `Fixes #123`, `Closes #456`). Include breaking change information (`BREAKING CHANGE: <description>`).
+
+## Branching
+- Use descriptive branch names (e.g., `feat/user-authentication`, `fix/login-bug`).
+- Keep branches short-lived and focused on a single feature or fix.
+- Rebase or merge branches according to project/team workflow.

@@ -1,0 +1,39 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# React Specific Rules
+
+## Component Design
+- **Functional Components:** Strongly prefer functional components with Hooks over class components.
+- **Naming:** Name components using `PascalCase` (e.g., `UserProfileCard`). Name component files matching the component name (e.g., `UserProfileCard.jsx` or `UserProfileCard.tsx`).
+- **Props:**
+    - Use TypeScript interfaces or `PropTypes` for defining component prop types. Be specific with types.
+    - Use object destructuring for props in the function signature: `function MyComponent({ userId, name }) {...}`.
+    - Provide default values for non-required props where appropriate.
+- **Composition:** Favor component composition over inheritance. Build complex UIs by combining smaller, reusable components.
+- **JSX:**
+    - Use parentheses `()` for multi-line JSX expressions.
+    - Always provide a unique `key` prop when rendering lists of elements. Use stable IDs if available; avoid using array index as a key if the list can change order or size.
+    - Use fragments (`<>...</>`) when you don't need an extra wrapping DOM element.
+
+## Hooks
+- **Rules of Hooks:** Only call Hooks at the top level of your React function components or custom Hooks. Don't call Hooks inside loops, conditions, or nested functions.
+- **`useState`:** Keep state variables focused. Prefer multiple `useState` calls for unrelated state over a single complex state object.
+- **`useEffect`:**
+    - Include all reactive values used inside the effect in the dependency array.
+    - Provide a cleanup function if the effect sets up subscriptions or timers.
+    - Avoid empty dependency arrays (`[]`) unless you truly intend the effect to run only once on mount and clean up on unmount, and it has no dependencies on component scope. Be cautious, this is often a source of bugs.
+    - Separate concerns into multiple `useEffect` hooks rather than one large one.
+- **Custom Hooks:** Extract reusable stateful logic into custom Hooks (named `useSomething`).
+
+## State Management
+- For simple state sharing between nearby components, use prop drilling or component composition.
+- For more complex, cross-component state, prefer React Context API (with `useReducer` or `useState` for logic) or a dedicated state management library (like Zustand, Redux Toolkit) if the project already uses one or complexity warrants it. Avoid introducing a complex library for simple cases.
+
+## Performance
+- Use `React.memo` for functional components or `PureComponent` for class components to prevent unnecessary re-renders only when profiling indicates a performance bottleneck and the component receives the same props often.
+- Use `useCallback` to memoize callback functions passed to optimized child components.
+- Use `useMemo` to memoize expensive calculations.
+- Apply performance optimizations thoughtfully, based on profiling, not premature optimization.

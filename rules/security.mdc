@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Security Best Practices
+
+## Input Validation
+- **Validate All Inputs:** Treat all data coming from external sources (user input, API responses, file uploads) as untrusted. Validate data on both the client-side (for quick feedback) and server-side (for security).
+- **Use Allow-lists:** Prefer allow-lists (defining what *is* permitted) over block-lists (defining what *is not* permitted) for validation.
+- **Type Checking:** Ensure data is of the expected type.
+
+## Output Encoding/Sanitization
+- **Prevent Cross-Site Scripting (XSS):** Sanitize or encode user-generated content before rendering it in HTML to prevent XSS attacks. Frameworks like React often do this automatically for content within JSX, but be careful when using `dangerouslySetInnerHTML` or manipulating the DOM directly.
+- **Contextual Encoding:** Apply encoding appropriate for the context where data is used (HTML body, HTML attributes, JavaScript, CSS, URL parameters).
+
+## Authentication & Authorization
+- **Strong Authentication:** Implement robust authentication mechanisms. Use secure password hashing (e.g., bcrypt). Consider multi-factor authentication (MFA).
+- **Secure Session Management:** Use secure, HttpOnly, SameSite cookies for session tokens. Regenerate session IDs upon login.
+- **Authorization Checks:** Perform authorization checks on the server-side for every request that accesses or modifies resources. Ensure users can only access data they are permitted to see/modify.
+
+## API Security
+- **HTTPS:** Always use HTTPS for communication.
+- **Rate Limiting:** Implement rate limiting on APIs to prevent abuse and denial-of-service attacks.
+- **Sensitive Data:** Avoid sending sensitive data (passwords, API keys) to the client-side unless absolutely necessary and secured appropriately. Do not log sensitive data.
+
+## Dependency Management
+- Keep dependencies up-to-date to patch known vulnerabilities.
+- Use tools (like `npm audit`, `yarn audit`, GitHub Dependabot) to scan for vulnerabilities in dependencies.

@@ -1,0 +1,31 @@
+{
+    "name": "ai-cursor-rules",
+    "version": "0.1.0",
+    "description": "A CLI tool to initialize projects with standard Cursor AI rules.",
+    "type": "module",
+    "main": "cli.js",
+    "bin": {
+        "ai-cursor-rules": "./cli.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "cursor",
+        "ai",
+        "rules",
+        "linting",
+        "standards",
+        "cli"
+    ],
+    "author": "Rick Wong",
+    "license": "MIT",
+    "dependencies": {
+        "fs-extra": "^11.2.0"
+    },
+    "files": [
+        "cli.js",
+        "rules/"
+    ],
+    "preferGlobal": true
+}

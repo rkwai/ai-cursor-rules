@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Testing Rules
+
+## General
+- **Write Tests:** Write tests for new features and bug fixes. Aim for confidence, not just coverage percentage. Focus on testing critical paths and business logic.
+- **Test Types:**
+    - **Unit Tests:** Test individual functions or components in isolation. Mock dependencies.
+    - **Integration Tests:** Test the interaction between multiple units/components.
+    - **End-to-End (E2E) Tests:** Test the full application flow from the user's perspective (use sparingly as they are slower and more brittle).
+- **Descriptive Names:** Use clear and descriptive names for test suites (`describe` blocks) and individual tests (`it` or `test` blocks) that explain what is being tested and the expected outcome.
+- **AAA Pattern:** Structure tests using Arrange, Act, Assert (or Given, When, Then).
+- **Isolation:** Ensure tests are independent and can run in any order. Avoid tests relying on the state created by previous tests. Reset state/mocks before each test.
+- **Assertions:** Make specific and clear assertions. Avoid multiple assertions in a single test unless they are closely related to the same outcome.
+
+## Frameworks/Libraries (Examples - Adapt if using others)
+- **Jest:** Use Jest as the primary testing framework if applicable. Utilize its mocking capabilities (`jest.fn()`, `jest.mock()`).
+- **React Testing Library (RTL):**
+    - Prefer RTL for testing React components.
+    - Query elements the way users would (by role, label text, placeholder text, display text). Avoid querying by implementation details (CSS classes, test IDs) unless necessary.
+    - Test component behavior from the user's perspective, not internal implementation details. Interact with the component (`fireEvent` or `@testing-library/user-event`) and assert the resulting DOM changes or effects.
+- **Mocking:** Mock API calls, external services, or complex dependencies to keep unit/integration tests fast and reliable.
