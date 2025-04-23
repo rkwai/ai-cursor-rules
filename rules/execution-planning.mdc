@@ -1,0 +1,17 @@
+---
+description: "Execution - Use Agile ceremonies to maintain alignment and momentum."
+globs: docs/execution/planning.md
+alwaysApply: false
+---
+
+# Agile Execution and Ceremonies
+
+Execute development in iterative sprints and leverage Agile ceremonies to keep the team aligned, informed, and continuously improving. Structured rituals help maintain a steady development cadence and allow for regular course corrections.
+
+- **Backlog refinement:** Continuously groom the product backlog (with the product owner and team) to clarify requirements and prioritize tasks, ensuring the team always has well-defined work items.
+- **Sprint planning:** At the start of each sprint, collaboratively select a realistic set of user stories or tasks, and make sure each team member understands the acceptance criteria and expected outcomes.
+- **Daily stand-ups:** Hold short daily stand-up meetings (15 minutes) where each team member shares what they did yesterday, what they'll do today, and any blockers, so the team can synchronize and help each other.
+- **Sprint review/demos:** End each sprint with a review meeting to demo completed work to stakeholders and the team, gathering feedback and celebrating achievements.
+- **Retrospectives:** After each sprint, facilitate a retrospective for the team to discuss what went well, what didn't, and agree on concrete actions to improve next sprint's process or practices.
+- **Adapt based on insights:** Use the outcomes of reviews and retrospectives to adjust the backlog, project plans, or team practices, ensuring the execution process remains responsive to findings and team needs.
+

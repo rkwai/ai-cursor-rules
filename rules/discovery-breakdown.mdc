@@ -1,0 +1,17 @@
+---
+description: "Discovery - Plan collaboratively with Design, Engineering, and Product stakeholders."
+globs: docs/discovery/breakdown.md
+alwaysApply: false
+---
+
+# Collaborative Planning with Design and Engineering
+
+Involve product management, design, and engineering together in the planning process to create a feasible and well-thought-out plan. Collaborative planning leverages the expertise of all disciplines, ensuring the plan is realistic, user-centered, and technically sound.
+
+- **Conduct cross-functional kickoff workshops:** Early in the discovery phase, hold joint sessions (Product, Design, Engineering) to brainstorm solutions and discuss constraints and opportunities.
+- **Align on scope and feasibility:** Have engineers and designers review the proposed features to estimate effort and highlight any technical or UX challenges, adjusting scope as needed.
+- **Encourage shared decision-making:** Make planning decisions together – for example, trade-offs between scope, quality, and timeline should be discussed by the triad (P/D/E) rather than in silos.
+- **Document agreed outcomes:** Write down decisions from planning meetings (selected approaches, deferrals, technical choices) so there's a single source of truth for what will be built first and why.
+- **Plan in increments:** Break the work into smaller deliverable increments or milestones, with input from all team members, to enable iterative development and feedback loops.
+- **Schedule regular check-ins pre-development:** Set up brief sync meetings between product, design, and engineering during discovery to stay aligned as details evolve and to surface concerns early.
+

@@ -9,44 +9,58 @@ import { fileURLToPath } from 'url'; // To get the directory name in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Define the source directory (where rules are stored in the package)
-// Assumes 'rules' directory is at the same level as cli.js
+// --- Source Directories (within the package) ---
 const sourceRulesDir = path.resolve(__dirname, 'rules');
+const sourceDocsDir = path.resolve(__dirname, 'docs'); // Added docs source
 
-// Define the target directory (where rules should be copied in the user's project)
-const targetRulesDir = path.resolve(process.cwd(), '.cursor/rules');
+// --- Target Directories (in the user's project) ---
+const targetBaseDir = path.resolve(process.cwd(), '.cursor');
+const targetRulesDir = path.join(targetBaseDir, 'rules'); // Changed to use join
+const targetDocsDir = path.resolve(process.cwd(), 'docs'); // Corrected: points to project root/docs
 
 /**
- * Copies the rule files from the package source to the target project directory.
+ * Copies the rule and documentation files from the package source
+ * to the target project directory (.cursor/rules and ./docs).
  */
-async function copyRules() {
+async function syncAssets() { 
   try {
-    // Check if the source directory exists within the package
-    const sourceExists = await fs.pathExists(sourceRulesDir);
-    if (!sourceExists) {
-      console.error(`Error: Source rules directory not found at ${sourceRulesDir}`);
-      console.error("This might indicate an issue with the package installation.");
-      process.exit(1); // Exit with an error code
+    // --- Ensure Base Target Dirs Exist ---
+    console.log(`Ensuring rules target directory exists: ${targetRulesDir}`);
+    await fs.ensureDir(targetRulesDir); 
+    // Don't ensure targetDocsDir here, fs.copy will create it.
+    
+    // --- Copy Rules ---
+    const sourceRulesExists = await fs.pathExists(sourceRulesDir);
+    if (!sourceRulesExists) {
+      // Make this a warning instead of error? Depends on if rules are optional
+      console.warn(`Warning: Source rules directory not found at ${sourceRulesDir}. Skipping rules copy.`);
+    } else {
+      console.log(`Copying rules from ${sourceRulesDir} to ${targetRulesDir}...`);
+      await fs.copy(sourceRulesDir, targetRulesDir, { overwrite: true });
+      console.log(`Successfully copied Cursor rules to: ${targetRulesDir}`);
     }
 
-    // Ensure the target directory exists, creating it if necessary
-    await fs.ensureDir(targetRulesDir);
+    // --- Copy Docs ---
+    const sourceDocsExists = await fs.pathExists(sourceDocsDir);
+    if (!sourceDocsExists) {
+      console.warn(`Warning: Source docs directory not found at ${sourceDocsDir}. Skipping docs copy.`);
+    } else {
+      console.log(`Copying documentation from ${sourceDocsDir} to ${targetDocsDir}...`);
+      // No need for ensureDir for docs if copying the folder itself
+      await fs.copy(sourceDocsDir, targetDocsDir, { overwrite: true }); 
+      console.log(`Successfully copied documentation to: ${targetDocsDir}`);
+    }
 
-    // Copy the contents of the source directory to the target directory
-    // The 'overwrite: true' option will replace existing files with the same name
-    await fs.copy(sourceRulesDir, targetRulesDir, { overwrite: true });
-
-    console.log(`Successfully copied Cursor rules to: ${targetRulesDir}`);
-    console.log("You can now customize the rules in that directory as needed.");
+    console.log("\nInitialization complete.");
+    console.log(`Rules are in: ${targetRulesDir}`);
+    console.log(`Docs are in: ${targetDocsDir}`);
 
   } catch (err) {
-    console.error("Error initializing Cursor rules:", err);
+    console.error("Error initializing Cursor assets:", err);
     process.exit(1); // Exit with an error code
   }
 }
 
 // --- CLI Execution ---
-// You could add argument parsing here (e.g., using yargs) for more commands,
-// but for a simple init tool, just running the copy function is sufficient.
-console.log("Initializing Cursor rules...");
-copyRules(); // Run the main function
+console.log("Initializing Cursor rules and documentation...");
+syncAssets(); // Corrected function call

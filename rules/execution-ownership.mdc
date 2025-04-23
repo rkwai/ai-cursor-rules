@@ -1,0 +1,17 @@
+---
+description: "Execution - Define clear ownership roles and foster open team communication."
+globs: docs/execution/ownership.md
+alwaysApply: false
+---
+
+# Roles, Ownership, and Team Communication
+
+Establish clear roles and responsibilities within the team and maintain open communication channels. Clarity in ownership ensures accountability for every aspect of the product, while strong communication practices keep everyone informed and engaged.
+
+- **Define key roles and responsibilities:** Clearly document who is responsible for product management, engineering leadership, design lead, QA, etc., and what each role owns (e.g. feature prioritization, architectural decisions, UX consistency).
+- **Use a RACI or similar model:** If helpful, create a RACI matrix (Responsible, Accountable, Consulted, Informed) for major tasks or decision areas so there is no confusion about ownership.
+- **Set communication norms:** Establish regular communication routines (e.g. weekly team syncs, daily Slack updates, or stand-up meetings) and etiquette for responsiveness, ensuring timely information flow.
+- **Encourage transparency:** Foster an environment where team members share updates, concerns, and learnings openly; discourage information silos by using shared documentation and channels.
+- **Stakeholder updates:** Provide consistent updates to external stakeholders (e.g. brief weekly summary emails, sprint demos, or quarterly readouts) so they stay informed and trust the team’s direction.
+- **Empower decision-making:** Give owners the authority to make decisions in their domain, while encouraging them to consult the team when needed; this speeds up execution and builds trust.
+

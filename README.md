@@ -1,23 +1,26 @@
 # How to Use AI Cursor Rules CLI
 
-This guide explains how to use the `ai-cursor-rules` CLI tool to manage and deploy your standardized Cursor AI rule configurations across projects.
+This guide explains how to use the `ai-cursor-rules` CLI tool to manage and deploy your standardized Cursor AI rule configurations and associated documentation across projects.
 
 ## 1. Project Structure
 
-Ensure your project containing the rules adheres to the following structure:
+Ensure your package containing the rules and docs adheres to the following structure:
 
 ```
 my-cursor-rules/
-├── rules/
+├── rules/            # Directory for your .mdc rule files
 │   ├── general.mdc
 │   ├── react.mdc
 │   ├── web.mdc
-│   ├── testing.mdc
+│   ├── quality-control.mdc
 │   ├── git.mdc
 │   ├── security.mdc
 │   └── ai_behavior.mdc
-├── cli.js          # Your CLI script
-└── package.json    # Node.js package definition
+├── docs/             # Directory for documentation files
+│   ├── usage.md
+│   └── ... other docs
+├── cli.js            # Your CLI script
+└── package.json      # Node.js package definition
 ```
 
 ## 2. Linking for Local Development (Optional but Recommended)
@@ -42,7 +45,9 @@ Test the CLI in a different project directory:
     ai-cursor-rules
     ```
 
-This command should create a `.cursor/rules/` directory (if one doesn't already exist) within that test project and copy all your `.mdc` rule files into it.
+This command should:
+*   Create a `.cursor/rules/` directory (if one doesn't already exist) within that test project and copy all your `.mdc` rule files into it.
+*   Create a `docs/` directory (if one doesn't already exist) in the root of the test project and copy your documentation files into it.
 
 ## 4. Publishing to NPM (Optional)
 
@@ -65,10 +70,10 @@ Once published (or linked locally), users can install the CLI globally:
 npm install -g ai-cursor-rules
 ```
 
-Then, run it within any project directory to apply the rules:
+Then, run it within any project directory to apply the rules and copy the documentation:
 
 ```bash
 ai-cursor-rules
 ```
 
-This provides a convenient way to quickly set up any project with your standardized Cursor AI rules.
+This provides a convenient way to quickly set up any project with your standardized Cursor AI rules and their accompanying documentation.

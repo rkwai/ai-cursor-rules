@@ -1,0 +1,82 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# AI Quality Control Guide (.mdc)
+
+Guide for maintaining code quality and consistency using established practices and tools within this TypeScript project.
+
+## 1. Linting (ESLint)
+
+*   **What:** Static code analysis to enforce coding standards and catch potential errors early.
+*   **When:**
+    *   Continuously during code generation and modification.
+    *   Before suggesting code for commits or pull requests.
+*   **How:**
+    *   Adhere strictly to the project's `.eslintrc` configuration.
+    *   Use ESLint capabilities (`eslint . --fix` logic) to automatically format and fix violations where possible.
+    *   Flag complex or non-auto-fixable linting issues for user review.
+
+## 2. Code Guidelines
+
+*   **What:** Project-specific best practices, patterns, naming conventions, and architectural rules (often found in `CONTRIBUTING.md` or `STYLEGUIDE.md`).
+*   **When:**
+    *   During all code generation and modification tasks.
+    *   When refactoring existing code.
+*   **How:**
+    *   Prioritize clarity, maintainability, and simplicity.
+    *   Follow established patterns within the existing codebase.
+    *   If unsure about a convention, ask for clarification or refer to relevant documentation files.
+
+## 3. Unit Tests (Jest + React Testing Library)
+
+*   **What:** Testing individual functions, components, or modules in isolation to verify their core logic.
+*   **When:**
+    *   **During Implementation:** Generate unit tests alongside the implementation of new functions, components, or logic (as per workflow step: Implementation + Unit Tests).
+    *   When fixing bugs, add a unit test to prevent regressions.
+    *   When significantly modifying existing units.
+*   **How:**
+    *   Use `jest` for the test runner/assertions (`describe`, `it`, `expect`).
+    *   Use `@testing-library/react` (or appropriate framework variant) for testing component rendering, interactions, and accessibility.
+    *   Focus on testing inputs, outputs, edge cases, and component behavior, not implementation details.
+    *   Aim for meaningful coverage of the unit's logic.
+
+## 4. Integration Tests (Jest + MSW)
+
+*   **What:** Testing the interaction and communication between multiple units/modules or components and mocked external services (APIs).
+*   **When:**
+    *   **During Work Breakdown:** Define and generate integration tests after features are broken down, verifying how components/modules will interact (as per workflow step: Work Breakdown + Integration Tests).
+    *   When implementing features involving multiple collaborating parts or API calls.
+*   **How:**
+    *   Use `jest` as the test runner.
+    *   Use `msw` extensively to mock API endpoints the integrated parts rely on. Define realistic mock responses.
+    *   Test the flow of data and control between the integrated parts.
+    *   Verify that components render correctly based on mocked API states (loading, success, error).
+
+## 5. End-to-End (E2E) Tests (Playwright)
+
+*   **What:** Testing complete user flows through the application simulating real user interaction in a browser.
+*   **When:**
+    *   **During Feature Definition:** Design E2E test cases based on the feature definition and demo steps (as per workflow step: Feature + Demo Steps + E2E Tests).
+    *   Implement or update E2E tests *after* a feature is functionally complete in the UI, typically before creating a PR or merging.
+    *   When critical user journeys are added or modified.
+*   **How:**
+    *   Use `playwright` to script browser interactions (`page.goto`, `page.locator`, `page.click`, `expect`).
+    *   Focus on testing user-critical paths and workflows end-to-end.
+    *   Base tests on user stories and acceptance criteria ("Can a user log in and see their dashboard?").
+    *   Keep tests resilient to minor UI changes by using stable selectors (like `data-testid`). Avoid testing implementation details.
+
+## 6. PR (Pull Request) Preparation
+
+*   **What:** Ensuring code changes are ready for human review before merging.
+*   **When:** Before finalizing code for a pull request.
+*   **How:**
+    *   **Run all checks:** Ensure `eslint` passes with no errors.
+    *   **Run all tests:** Ensure all Unit, Integration (and potentially E2E, depending on CI setup) tests pass.
+    *   **Code Clarity:** Ensure generated code is readable, follows guidelines, and includes necessary comments where logic is complex.
+    *   **Self-Correction:** Review the generated code for adherence to all the above points.
+
+---
+
+**Goal:** Apply these techniques appropriately to produce high-quality, consistent, maintainable, and well-tested TypeScript code.

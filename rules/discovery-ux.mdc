@@ -1,0 +1,17 @@
+---
+description: "Discovery - Map user flows and ensure a good user experience."
+globs: docs/discovery/ux.md
+alwaysApply: false
+---
+
+# User Flows and Experience Design
+
+Map out the end-to-end user flows to ensure a coherent and intuitive user experience. Understanding how users will navigate and interact with the product helps identify gaps and refine requirements before development.
+
+- **Visualize key user journeys:** Diagram or storyboard the steps a user takes to accomplish core tasks (e.g. onboarding, completing a primary task, error recovery).
+- **Identify touchpoints and decisions:** For each flow, mark all user actions, system responses, and decision points to ensure no scenario is overlooked.
+- **Optimize for simplicity:** Verify that each user flow is as simple and frictionless as possible; remove unnecessary steps and clarify any potentially confusing interactions.
+- **Collaborate on UX design:** Work closely with UX/UI designers to create wireframes or prototypes for these flows, aligning on how the product will look and feel for each step.
+- **Validate flows with users:** If possible, conduct quick user testing or stakeholder walkthroughs of the proposed flows and prototypes to catch usability issues early.
+- **Update requirements as needed:** Refine the product requirements based on feedback from flow reviews, ensuring the documentation stays aligned with the envisioned user experience.
+
