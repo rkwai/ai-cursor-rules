@@ -1,6 +1,6 @@
 # How to Use AI Cursor Rules CLI
 
-This guide explains how to use the `ai-cursor-rules` CLI tool to manage and deploy your standardized Cursor AI rule configurations and associated documentation across projects.
+This guide explains how to use the `ai-cursor-rules` CLI tool to manage and deploy your standardized Cursor AI rule configurations and associated documentation across projects. These rules cover a wide range of topics including **technical best practices, project execution, product discovery, strategic alignment, and quality control**.
 
 ## 1. Project Structure
 
@@ -9,13 +9,14 @@ Ensure your package containing the rules and docs adheres to the following struc
 ```
 my-cursor-rules/
 ├── rules/            # Directory for your .mdc rule files
-│   ├── general.mdc
-│   ├── react.mdc
-│   ├── web.mdc
+│   ├── technical-general.mdc
+│   ├── technical-react.mdc
+│   ├── technical-git.mdc
+│   ├── execution-planning.mdc
+│   ├── discovery-prd.mdc
+│   ├── strategy-kpis.mdc
 │   ├── quality-control.mdc
-│   ├── git.mdc
-│   ├── security.mdc
-│   └── ai_behavior.mdc
+│   └── ... (many other rule files covering different areas)
 ├── docs/             # Directory for documentation files
 │   ├── usage.md
 │   └── ... other docs
@@ -76,4 +77,4 @@ Then, run it within any project directory to apply the rules and copy the docume
 ai-cursor-rules
 ```
 
-This provides a convenient way to quickly set up any project with your standardized Cursor AI rules and their accompanying documentation.
+This provides a convenient way to quickly set up any project with your comprehensive suite of standardized Cursor AI rules and their accompanying documentation.
