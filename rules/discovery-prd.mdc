@@ -8,9 +8,11 @@ alwaysApply: false
 
 Provide a clear and detailed definition of the product to guide the team during development. A well-crafted product definition (often as a Product Requirements Document) ensures everyone understands the problem being solved, the proposed solution, and what features will be delivered.
 
-- **State the problem and vision:** Begin the document with a brief of the user problem or need and the product vision for addressing it.
+Reference [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), and [kpis.md](mdc:docs/strategy/kpis.md).
+
+- **State the problem and vision:** Begin the document with a brief of the user problem or need and the product vision for addressing it in [prd.md](mdc:docs/discovery/prd.md).
 - **Outline key features and scope:** List the product's primary features or use cases, highlighting what is in scope (and out of scope) for the initial release.
-- **Detail requirements and user stories:** For each feature, write specific requirements or user stories with acceptance criteria so that design and engineering know exactly what to build.
+- **Detail requirements and user stories:** For each feature, write specific requirements or user stories with acceptance criteria in [features.md](mdc:docs/discovery/features.md) so that design and engineering know exactly what to build.
 - **Include constraints and assumptions:** Note any technical constraints, dependencies, or assumptions (e.g. platforms, performance needs, compliance requirements) that affect the solution.
 - **Review with the team:** Walk through the product definition with design and engineering in a meeting to ensure clarity, feasibility, and shared understanding before development starts.
 

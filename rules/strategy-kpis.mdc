@@ -8,9 +8,9 @@ alwaysApply: false
 
 Communicate the product vision and strategy clearly to stakeholders and team members, and secure the necessary resources to execute it. A well-communicated strategy with leadership buy-in ensures everyone is aligned and the project is properly supported.
 
-- **Draft a clear strategy document:** Summarize the product vision, target market, key objectives, and high-level roadmap in a concise document or presentation.
+- **Draft a clear strategy document:** Understand the product vision, target market, key objectives, and high-level roadmap by referencing [business-model.md](mdc:docs/strategy/business-model.md).
 - **Define required resources:** Outline the team roles, budget, and timeline needed to achieve the strategy, so leadership understands the commitment required.
 - **Hold a strategy kickoff meeting:** Present the strategy to executives and the team, answer questions, and obtain explicit buy-in on goals and resource plans.
-- **Set explicit goals and KPIs:** Communicate what success looks like (e.g. OKRs or key metrics) so all stakeholders know how progress will be measured.
-- **Regularly update stakeholders:** Provide periodic updates (e.g. monthly or quarterly) on progress, budget usage, and any changes to strategy to maintain support and alignment.
+- **Set explicit goals and KPIs:** Communicate what success looks like (e.g. OKRs or key metrics) in [kpis.md](mdc:docs/strategy/kpis.md) so all stakeholders know how progress will be measured.
+- **Regularly update stakeholders:** Provide periodic updates (e.g. monthly or quarterly) on progress, budget usage, and any changes to strategy to maintain support and alignment in [kpis.md](mdc:docs/strategy/kpis.md).
 

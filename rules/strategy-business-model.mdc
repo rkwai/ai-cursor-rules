@@ -6,10 +6,10 @@ alwaysApply: false
 
 # Business Model and Value Proposition
 
-Define how the product will create value for both the business and the customer. A clear business model and value proposition align the team on why the product matters and how it will succeed.
+Define how the product will create value for both the business and the customer using the Business Model Canvas. A clear business model and value proposition align the team on why the product matters and how it will succeed.
 
 - **Identify the business model:** Clarify how the product will generate revenue or achieve its goals (e.g. subscription, one-time sale, user growth for ad revenue, cost savings).
-- **Articulate the value proposition:** Describe the unique value the product offers to customers and how it solves their pain points better than alternatives.
+- **Articulate the value proposition:** Describe the unique value the product offers to your ideal customer profile in [segment.md](mdc:docs/strategy/segment.md) and how it solves their pain points better than alternatives.
 - **Know your differentiation:** Specify what sets your product apart in the market (unique features, pricing, quality) to ensure the value proposition is compelling.
 - **Set success metrics:** Define how success is measured (e.g. revenue targets, user engagement, retention) and tie these metrics to the business model and value delivered.
-- **Document and share:** Summarize the business model and value proposition in your strategy brief or canvas, and review it with stakeholders for alignment.
+- **Document and share:** Summarize the business model and value proposition in your strategy brief or canvas in [business-model.md](mdc:docs/strategy/business-model.md), and review it with stakeholders for alignment.

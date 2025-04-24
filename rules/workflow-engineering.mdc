@@ -1,0 +1,12 @@
+---
+description: Product and Engineering Context for Implemention
+globs: 
+alwaysApply: false
+---
+# Product Context
+- Reference [features.md](mdc:docs/discovery/features.md) to understand the features and their user flows
+- Reference [breakdown.md](mdc:docs/discovery/breakdown.md) to understand the components of the feature
+
+# Engineering Content
+- Reference [planning.md](mdc:docs/execution/planning.md) to understand the tasks for each feature
+- Reference [status.md](mdc:docs/execution/status.md) to understand where each task is at
