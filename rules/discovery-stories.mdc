@@ -1,12 +1,12 @@
 ---
 description: "Discovery - Plan collaboratively with Design, Engineering, and Product stakeholders."
-globs: docs/discovery/breakdown.md
+globs: docs/discovery/stories.md
 alwaysApply: false
 ---
 
 # Collaborative Planning with Design and Engineering
 
-Reference [features.md](mdc:docs/discovery/features.md) and involve product management, design, and engineering together in the planning process to breakdown the work in a well-thought-out plan in [breakdown.md](mdc:docs/discovery/breakdown.md).  Do that for each feature. Collaborative planning leverages the expertise of all disciplines, ensuring the plan is realistic, user-centered, and technically sound.
+Fully understand the [features.md](mdc:docs/discovery/features.md) and involve product management, design, and engineering together in the planning process to breakdown the work in a well-thought-out plan in [stories.md](mdc:docs/discovery/stories.md). Do that for each feature. Collaborative planning leverages the expertise of all disciplines, ensuring the plan is realistic, user-centered, and technically sound.
 
 - **Conduct cross-functional kickoff workshops:** Early in the discovery phase, hold joint sessions (Product, Design, Engineering) to brainstorm solutions and discuss constraints and opportunities.
 - **Align on scope and feasibility:** Have engineers and designers review the proposed features to estimate effort and highlight any technical or UX challenges, adjusting scope as needed.

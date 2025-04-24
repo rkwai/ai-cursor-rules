@@ -8,7 +8,7 @@ alwaysApply: false
 
 Throughout execution, ensure the team’s work remains aligned with the product’s strategic goals and proactively manage risks that could impede success. Ongoing alignment and risk tracking allow for timely adjustments before small issues become big problems.
 
-Reference [tasks.md](mdc:docs/execution/tasks.md) to see what work is in motion and report notable items in [status.md](mdc:docs/execution/status.md) and tag the owner found in [ownership.md](mdc:docs/execution/ownership.md).
+Fully understand the [tasks.md](mdc:docs/execution/tasks.md) to see what work is in motion and report notable items in [status.md](mdc:docs/execution/status.md) and tag the owner found in [ownership.md](mdc:docs/execution/ownership.md).
 
 - **Regularly revisit objectives:** Keep the product's key objectives or OKRs visible and review progress toward them in team meetings (e.g. mid-sprint or weekly) to confirm that current work is contributing to strategic goals.
 - **Monitor key metrics:** Track important metrics (e.g. user growth, performance, quality) as development progresses, and surface any concerning trends early to the team and stakeholders.

@@ -8,7 +8,7 @@ alwaysApply: false
 
 Provide a clear and detailed definition of the product to guide the team during development. A well-crafted product definition (often as a Product Requirements Document) ensures everyone understands the problem being solved, the proposed solution, and what features will be delivered.
 
-Reference [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), and [kpis.md](mdc:docs/strategy/kpis.md).
+Fully understand [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), and [kpis.md](mdc:docs/strategy/kpis.md) before building the PRD.
 
 - **State the problem and vision:** Begin the document with a brief of the user problem or need and the product vision for addressing it in [prd.md](mdc:docs/discovery/prd.md).
 - **Outline key features and scope:** List the product's primary features or use cases, highlighting what is in scope (and out of scope) for the initial release.

@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Features and User Flows
 
-Reference the [prd.md](mdc:docs/discovery/prd.md) and map out the end-to-end user flows for each feature in [features.md](mdc:docs/discovery/features.md) to ensure a coherent and intuitive user experience. Understanding how users will navigate and interact with the product helps identify gaps and refine requirements before development.
+Fully understand the [prd.md](mdc:docs/discovery/prd.md) and map out the end-to-end user flows for each feature in [features.md](mdc:docs/discovery/features.md) to ensure a coherent and intuitive user experience. Understanding how users will navigate and interact with the product helps identify gaps and refine requirements before development.
 
 - **Visualize key user journeys:** Diagram or storyboard the steps a user takes to accomplish core tasks (e.g. onboarding, completing a primary task, error recovery).
 - **Identify touchpoints and decisions:** For each flow, mark all user actions, system responses, and decision points to ensure no scenario is overlooked.
