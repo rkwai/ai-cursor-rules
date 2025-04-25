@@ -35,3 +35,4 @@ alwaysApply: true
 - Keep functions and components focused on a single responsibility (Single Responsibility Principle).
 - Avoid magic numbers and strings. Define them as named constants.
 - Prioritize readability and maintainability. Write code for humans first.
+

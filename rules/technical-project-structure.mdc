@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Structure
+- Fully understand [project-structure.md](mdc:docs/technical/project-structure.md) before adding libraries or creating new files
+- Always update [project-structure.md](mdc:docs/technical/project-structure.md) when needed
