@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Environment
+- Fully understand [project-environment.md](mdc:docs/technical/project-environment.md) when setting up local or production environments
+- Always update [project-environment.md](mdc:docs/technical/project-environment.md) when needed

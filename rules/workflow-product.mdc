@@ -4,9 +4,9 @@ globs:
 alwaysApply: false
 ---
 # Understand the business
-- Reference [business-model.md](mdc:docs/strategy/business-model.md) to understand the business
-- Reference [segment.md](mdc:docs/strategy/segment.md) to understand the users
-- Reference [kpis.md](mdc:docs/strategy/kpis.md) to understand the goals
+- Fully understand [business-model.md](mdc:docs/strategy/business-model.md) to know about the business
+- Fully understand [segment.md](mdc:docs/strategy/segment.md) to know about the users
+- Fully understand [kpis.md](mdc:docs/strategy/kpis.md) to know about the goals
 
 # Understand the product
-- Reference [prd.md](mdc:docs/discovery/prd.md) to understsand the product
+- Fully understand [prd.md](mdc:docs/discovery/prd.md) to know about the product

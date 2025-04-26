@@ -1,12 +1,16 @@
 ---
-description: Product and Engineering Context for Implemention
+description: Get Product and Engineering Context for Implemention
 globs: 
 alwaysApply: false
 ---
 # Product Context
-- Reference [features.md](mdc:docs/discovery/features.md) to understand the features and their user flows
-- Reference [breakdown.md](mdc:docs/discovery/breakdown.md) to understand the components of the feature
+- Fully understand [features.md](mdc:docs/discovery/features.md) to know about the features and the user flows
+- Fully understand [stories.md](mdc:docs/discovery/stories.md) to know about the components of the features
 
-# Engineering Content
-- Reference [planning.md](mdc:docs/execution/planning.md) to understand the tasks for each feature
-- Reference [status.md](mdc:docs/execution/status.md) to understand where each task is at
+# Engineering Context
+- Fully understand [tasks.md](mdc:docs/execution/tasks.md) to know about the tasks for each feature
+- Fully understand [status.md](mdc:docs/execution/status.md) to know what the next task is and its status
+
+# Technical Context
+- Fully understand [project-environment.md](mdc:docs/technical/project-environment.md) to know how to setup the coding environments
+- Fully understand [project-structure.md](mdc:docs/technical/project-structure.md) to know how the project is structured
