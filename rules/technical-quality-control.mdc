@@ -5,7 +5,7 @@ alwaysApply: false
 ---
 # AI Quality Control Guide (.mdc)
 
-Guide for maintaining code quality and consistency using established practices and tools within this TypeScript project.
+Guide for maintaining code quality and consistency using established practices and tools for a TypeScript project.  Fully understand [prd.md](mdc:docs/discovery/prd.md), [features.md](mdc:docs/discovery/features.md), and [tasks.md](mdc:docs/execution/tasks.md) before creating or updating specific testing strategy in [testing-strategy.md](mdc:docs/technical/testing-strategy.md).
 
 ## 1. Linting (ESLint)
 
@@ -17,10 +17,12 @@ Guide for maintaining code quality and consistency using established practices a
     *   Adhere strictly to the project's `.eslintrc` configuration.
     *   Use ESLint capabilities (`eslint . --fix` logic) to automatically format and fix violations where possible.
     *   Flag complex or non-auto-fixable linting issues for user review.
+*   **Where:**
+    *   Include details [project-environment.md](mdc:docs/technical/project-environment.md)
 
 ## 2. Code Guidelines
 
-*   **What:** Project-specific best practices, patterns, naming conventions, and architectural rules (often found in `CONTRIBUTING.md` or `STYLEGUIDE.md`).
+*   **What:** Project-specific best practices, patterns, naming conventions, and architectural rules.
 *   **When:**
     *   During all code generation and modification tasks.
     *   When refactoring existing code.
@@ -28,6 +30,8 @@ Guide for maintaining code quality and consistency using established practices a
     *   Prioritize clarity, maintainability, and simplicity.
     *   Follow established patterns within the existing codebase.
     *   If unsure about a convention, ask for clarification or refer to relevant documentation files.
+*   **Where:**
+    *   Include details in `CONTRIBUTING.md` or `STYLEGUIDE.md`
 
 ## 3. Unit Tests (Jest + React Testing Library)
 
@@ -41,6 +45,8 @@ Guide for maintaining code quality and consistency using established practices a
     *   Use `@testing-library/react` (or appropriate framework variant) for testing component rendering, interactions, and accessibility.
     *   Focus on testing inputs, outputs, edge cases, and component behavior, not implementation details.
     *   Aim for meaningful coverage of the unit's logic.
+*   **Where:**
+    *   Include tests in `src/components` (frontend) and `src/features` (backend)
 
 ## 4. Integration Tests (Jest + MSW)
 
@@ -53,6 +59,8 @@ Guide for maintaining code quality and consistency using established practices a
     *   Use `msw` extensively to mock API endpoints the integrated parts rely on. Define realistic mock responses.
     *   Test the flow of data and control between the integrated parts.
     *   Verify that components render correctly based on mocked API states (loading, success, error).
+*   **Where:**
+    *   Include tests in `src/pages` (frontend) and `src/domains` (backend)
 
 ## 5. End-to-End (E2E) Tests (Playwright)
 
@@ -66,6 +74,9 @@ Guide for maintaining code quality and consistency using established practices a
     *   Focus on testing user-critical paths and workflows end-to-end.
     *   Base tests on user stories and acceptance criteria ("Can a user log in and see their dashboard?").
     *   Keep tests resilient to minor UI changes by using stable selectors (like `data-testid`). Avoid testing implementation details.
+*   **Where:**
+    *   Include tests in root folder where `e2e` testing folder is at
+
 
 ## 6. PR (Pull Request) Preparation
 

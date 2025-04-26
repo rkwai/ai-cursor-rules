@@ -4,5 +4,10 @@ globs:
 alwaysApply: true
 ---
 # Project Structure
-- Fully understand [project-structure.md](mdc:docs/technical/project-structure.md) before adding libraries or creating new files
-- Always update [project-structure.md](mdc:docs/technical/project-structure.md) when needed
+- Fully understand project structure in [STYLEGUIDE.md](mdc:stylemorph/STYLEGUIDE.md) before adding libraries or creating new files
+- Always update project structure in [STYLEGUIDE.md](mdc:stylemorph/STYLEGUIDE.md) when needed
+
+# Creating new project structure
+- Prefer `mono repo` where the `root folder` is mainly for `docs` and will hold both `frontend` and `backend` applications
+- `frontend` applications are organized by `feature`, `pages` and `components`
+- `backend` appllications are organized by `domain` and `feature`
