@@ -12,6 +12,7 @@ Fully understand [business-model.md](mdc:docs/strategy/business-model.md), [segm
 
 - **State the problem and vision:** Begin the document with a brief of the user problem or need and the product vision for addressing it in [prd.md](mdc:docs/discovery/prd.md).
 - **Outline key features and scope:** List the product's primary features or use cases, highlighting what is in scope (and out of scope) for the initial release.
+- **Identify key business domains needed:** List the business domains needed to build the product in [domains.md](mdc:docs/discovery/domains.md)  
 - **Detail requirements and user stories:** For each feature, write specific requirements or user stories with acceptance criteria in [features.md](mdc:docs/discovery/features.md) so that design and engineering know exactly what to build.
 - **Include constraints and assumptions:** Note any technical constraints, dependencies, or assumptions (e.g. platforms, performance needs, compliance requirements) that affect the solution.
 - **Review with the team:** Walk through the product definition with design and engineering in a meeting to ensure clarity, feasibility, and shared understanding before development starts.

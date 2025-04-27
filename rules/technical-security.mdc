@@ -27,4 +27,3 @@ alwaysApply: false
 ## Dependency Management
 - Keep dependencies up-to-date to patch known vulnerabilities.
 - Use tools (like `npm audit`, `yarn audit`, GitHub Dependabot) to scan for vulnerabilities in dependencies.
-
