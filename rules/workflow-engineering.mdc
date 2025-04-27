@@ -14,3 +14,4 @@ alwaysApply: false
 # Technical Context
 - Fully understand [project-environment.md](mdc:docs/technical/project-environment.md) to know how to setup the coding environments
 - Fully understand [project-structure.md](mdc:docs/technical/project-structure.md) to know how the project is structured
+- Fully understand [technical-quality-control.mdc](mdc:.cursor/rules/technical-quality-control.mdc) and practice test driven development
