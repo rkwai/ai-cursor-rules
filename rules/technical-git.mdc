@@ -5,6 +5,8 @@ alwaysApply: false
 ---
 # Git & Version Control Rules
 
+- Make sure commit messages are safe to type in terminal
+
 ## Commit Messages
 - **Conventional Commits:** Follow the Conventional Commits specification (https://www.conventionalcommits.org/). The basic format is:
   ```

@@ -8,10 +8,12 @@ alwaysApply: false
 - Fully understand [stories.md](mdc:docs/discovery/stories.md) to know about the components of the features
 
 # Engineering Context
+- Fully understand [domains.md](mdc:docs/discovery/domains.md) to know about the key domains in the product
 - Fully understand [tasks.md](mdc:docs/execution/tasks.md) to know about the tasks for each feature
 - Fully understand [status.md](mdc:docs/execution/status.md) to know what the next task is and its status
 
 # Technical Context
 - Fully understand [project-environment.md](mdc:docs/technical/project-environment.md) to know how to setup the coding environments
 - Fully understand [project-structure.md](mdc:docs/technical/project-structure.md) to know how the project is structured
-- Fully understand [technical-quality-control.mdc](mdc:.cursor/rules/technical-quality-control.mdc) and practice test driven development
+- Fully understand [tech-stack.md](mdc:docs/technical/tech-stack.md) to know about the technical stack
+- Fully understand [testing-strategy.md](mdc:docs/technical/testing-strategy.md) and practice test driven development

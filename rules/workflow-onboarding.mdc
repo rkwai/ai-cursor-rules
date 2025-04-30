@@ -7,4 +7,5 @@ alwaysApply: true
 - If you need to understand the business and product, fully understand [workflow-product.mdc](mdc:.cursor/rules/workflow-product.mdc)
 - If you need to understand the code, fully understand [workflow-engineering.mdc](mdc:.cursor/rules/workflow-engineering.mdc)
 - If you need to know what is being worked on and what was completed, fully understand [tasks.md](mdc:docs/execution/tasks.md) and [status.md](mdc:docs/execution/status.md)
+- When deciding on what to work on next, always think as a product manager to find the next most valuable thing for the users
 

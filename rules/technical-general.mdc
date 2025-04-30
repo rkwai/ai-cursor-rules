@@ -30,6 +30,9 @@ alwaysApply: true
 - Provide meaningful error messages.
 - Don't swallow errors silently unless there's a very specific, documented reason. Log errors appropriately.
 
+## Environment Variables
+- Use environment variables so that local, testing, and production environments can have different values
+
 ## Principles
 - Adhere to the DRY (Don't Repeat Yourself) principle. Refactor repeated logic into reusable functions or components.
 - Keep functions and components focused on a single responsibility (Single Responsibility Principle).

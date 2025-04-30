@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Tech-Stack Governance
+
+Maintain a single source of truth [tech-stack.md](mdc:docs/technical/tech-stack.md). Update it each time an architectural or infrastructure decision is made.
+
+- **Create on first use:** If [tech-stack.md](mdc:docs/technical/tech-stack.md) is missing, generate it in the `docs/technical` folder
+  ▸ *Overview ‖ Languages & Frameworks ‖ Infrastructure ‖ Data Stores ‖ DevOps & Tooling ‖ Decision Log*.
+- **Log every decision:** Append a dated entry under **Decision Log** capturing *Decision, Context, Alternatives, Consequences, Owner* in `docs/technical/adr` folder.
+- **Sync dependencies:** Reflect added/removed libraries, frameworks, versions in the relevant sections.
+- **Link to ADRs:** Cross-reference any Architecture Decision Record files (e.g. `adr-###.md`) for full rationale.
+- **Enforce in PRs:** Reviewers must reject changes to infra/config/code that alter the stack unless [tech-stack.md](mdc:docs/technical/tech-stack.md) is updated.
+- **CI guardrail:** CI should fail if Terraform/Docker/K8s/etc. files change without a matching diff in [tech-stack.md](mdc:docs/technical/tech-stack.md).
+- **Version-bump note:** When upgrading a core dependency, record previous vs new version plus migration notes.
+- **Ownership:** Engineering lead ensures accuracy; all contributors update the file when introducing stack changes.

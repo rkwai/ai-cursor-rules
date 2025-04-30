@@ -8,7 +8,7 @@ alwaysApply: false
 
 Execute development in iterative sprints and leverage Agile ceremonies to keep the team aligned, informed, and continuously improving. Structured rituals help maintain a steady development cadence and allow for regular course corrections.
 
-Fully understand the [stories.md](mdc:docs/discovery/stories.md) to create tasks in [tasks.md](mdc:docs/execution/tasks.md)
+Fully understand the [stories.md](mdc:docs/discovery/stories.md) to create tasks in [tasks.md](mdc:docs/execution/tasks.md) only if the story is complex enough where tasks are warranted. 
 
 - **Backlog refinement:** Continuously groom the product backlog (with the product owner and team) to clarify requirements and prioritize tasks, ensuring the team always has well-defined work items.
 - **Sprint planning:** At the start of each sprint, collaboratively select a realistic set of user stories or tasks, and make sure each team member understands the acceptance criteria and expected outcomes.

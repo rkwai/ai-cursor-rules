@@ -10,3 +10,4 @@ alwaysApply: false
 
 # Understand the product
 - Fully understand [prd.md](mdc:docs/discovery/prd.md) to know about the product
+- Fully understand [features.md](mdc:docs/discovery/features.md) to know about the product features

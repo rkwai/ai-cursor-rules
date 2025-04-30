@@ -1,11 +1,11 @@
 ---
-description: 
+description: When writing (unit, integration, e2e) tests, creating linting rules, or preparing pull requests
 globs: 
 alwaysApply: false
 ---
 # AI Quality Control Guide (.mdc)
 
-Guide for maintaining code quality and consistency using established practices and tools for a TypeScript project.  Fully understand [prd.md](mdc:docs/discovery/prd.md), [features.md](mdc:docs/discovery/features.md), and [tasks.md](mdc:docs/execution/tasks.md) before creating or updating specific testing strategy in [testing-strategy.md](mdc:docs/technical/testing-strategy.md).
+Guide for maintaining code quality and consistency using established practices and tools for a TypeScript project.  Fully understand [prd.md](mdc:docs/discovery/prd.md), [features.md](mdc:docs/discovery/features.md), and [stories.md](mdc:docs/discovery/stories.md) before creating or updating specific testing strategy in [testing-strategy.md](mdc:docs/technical/testing-strategy.md).
 
 ## 1. Linting (ESLint)
 
@@ -80,7 +80,10 @@ Guide for maintaining code quality and consistency using established practices a
 
 ## 6. PR (Pull Request) Preparation
 
-*   **What:** Ensuring code changes are ready for human review before merging.
+*   **What:** 
+    * Ensuring code changes are ready for human review before merging. 
+    * Make sure tests are added based on [testing-strategy.md](mdc:docs/technical/testing-strategy.md)
+    * Make sure [tasks.md](mdc:docs/execution/tasks.md) and [status.md](mdc:docs/execution/status.md) are up-to-date
 *   **When:** Before finalizing code for a pull request.
 *   **How:**
     *   **Run all checks:** Ensure `eslint` passes with no errors.

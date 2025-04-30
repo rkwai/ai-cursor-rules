@@ -1,6 +1,6 @@
 ---
 description: "Discovery - Map user flows and ensure a good user experience."
-globs: docs/execution/domains.md
+globs: docs/discovery/domains.md
 alwaysApply: false
 ---
 
