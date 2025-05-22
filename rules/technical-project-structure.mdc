@@ -3,10 +3,23 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Project Structure
-- Fully understand project structure in [project-structure.md](mdc:docs/technical/project-structure.md) before adding libraries or creating new files
-- Always update project structure in [project-structure.md](mdc:docs/technical/project-structure.md) when needed
+# Project Structure Documentation
 
-# Creating new project structure
-- Prefer `mono repo` orgazied by `feature`
-- If a new structure is needed, fully understand the [template-project-structure.md](mdc:docs/templates/template-project-structure.md) before creating [project-structure.md](mdc:docs/technical/project-structure.md)
+## Understanding and Maintaining [project-structure.md](mdc:docs/technical/project-structure.md)
+
+1.  **Assess [project-structure.md](mdc:docs/technical/project-structure.md):**
+    *   If it is empty or contains only placeholder text, state that you will use [template-project-structure.md](mdc:docs/templates/template-project-structure.md) as a basis to document the project's specific structure, architectural patterns, and design decisions (e.g., monorepo layout, hexagonal architecture if applicable).
+    *   Tailor the template content to the current project, including creating or referencing ADRs in `docs/technical/adr/` for significant architectural choices.
+2.  **If [project-structure.md](mdc:docs/technical/project-structure.md) is already populated:**
+    *   Fully understand its existing content regarding this project's folder structure, architectural patterns, and design decisions, including any linked ADRs.
+    *   Ensure any advice on adding libraries or creating new files is consistent with this established structure.
+3.  **When adding new libraries, features, or making architectural changes:**
+    *   Refer to the (newly populated or existing) [project-structure.md](mdc:docs/technical/project-structure.md) for guidance.
+    *   If a new architectural decision is made, create an ADR in `docs/technical/adr/` and update [project-structure.md](mdc:docs/technical/project-structure.md) to reference it if appropriate.
+4.  **Always update [project-structure.md](mdc:docs/technical/project-structure.md):**
+    *   If you make significant changes to the project's organization or architecture, ensure this document (and any relevant ADRs) are updated.
+
+## Creating New Project Structure or Making Significant Changes
+
+*   If defining the structure for a new project or making substantial changes, consult the guidelines and examples in [template-project-structure.md](mdc:docs/templates/template-project-structure.md)` and the principles outlined in the (newly populated or existing) [project-structure.md](mdc:docs/technical/project-structure.md).
+*   Prefer `mono repo` organized by `feature` if appropriate for the project context, as exemplified in the template.

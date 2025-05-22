@@ -17,9 +17,22 @@ my-cursor-rules/
 │   ├── strategy-kpis.mdc
 │   ├── quality-control.mdc
 │   └── ... (many other rule files covering different areas)
-├── docs/             # Directory for documentation files
-│   ├── usage.md
-│   └── ... other docs
+├── docs/             # Directory for documentation files copied to target projects
+│   ├── strategy/         # Strategic framework documents (project-specific)
+│   ├── discovery/        # Product discovery and definition guides (project-specific)
+│   ├── execution/        # Agile execution and team process docs (project-specific)
+│   ├── technical/        # Technical guidelines (project-specific, to be filled using templates)
+│   │   ├── project-structure.md    # (placeholder for project's specific structure)
+│   │   ├── tech-stack.md           # (placeholder for project's specific tech stack & ADR log)
+│   │   ├── testing-strategy.md     # (placeholder for project's specific testing strategy)
+│   │   ├── project-environment.md  # (placeholder for project's specific environment setup)
+│   │   └── adr/                    # (for project's Architectural Decision Records)
+│   ├── templates/        # Opinionated templates to guide technical documentation:
+│   │   ├── template-project-structure.md
+│   │   ├── template-tech-stack.md
+│   │   ├── template-testing-strategy.md
+│   │   └── template-project-environment.md
+│   └── usage.md          # Example: How to use/interpret the provided docs & rules
 ├── cli.js            # Your CLI script
 └── package.json      # Node.js package definition
 ```
@@ -31,7 +44,8 @@ Before publishing, test your CLI locally:
 1.  Navigate to your package directory (`ai-cursor-rules/`) in your terminal.
 2.  Run the following command:
     ```bash
-    npm link
+    pnpm install
+    pnpm link --global
     ```
 
 This creates a global symbolic link to your package, allowing you to run the `ai-cursor-rules` command anywhere on your system as if it were installed globally.
@@ -59,7 +73,7 @@ To share your package on NPM (publicly or privately):
 3.  **Commit your changes** to version control.
 4.  Run the publish command:
     ```bash
-    npm publish
+    pnpm publish
     ```
     *(Note: Add `--access public` if publishing a scoped package like `@your-npm-username/ai-cursor-rules` publicly for the first time).*
 
@@ -68,7 +82,7 @@ To share your package on NPM (publicly or privately):
 Once published (or linked locally), users can install the CLI globally:
 
 ```bash
-npm install -g ai-cursor-rules
+pnpm add -g ai-cursor-rules
 ```
 
 Then, run it within any project directory to apply the rules and copy the documentation:

@@ -3,6 +3,17 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Project Environment
-- Fully understand [project-environment.md](mdc:docs/technical/project-environment.md) when setting up local or production environments
-- Always update [project-environment.md](mdc:docs/technical/project-environment.md) when needed
+# Project Environment Documentation
+
+## Understanding and Maintaining [project-environment.md](mdc:docs/technical/project-environment.md)
+
+1.  **Assess [project-environment.md](mdc:docs/technical/project-environment.md):**
+    *   If it is empty or contains only placeholder text, state that you will use [template-project-environment.md](mdc:docs/templates/template-project-environment.md)` as a basis to create project-specific environment and CI/CD documentation.
+    *   Proceed to define or update sections such as Onboarding (development commands), CI/CD pipeline, and relevant environment configurations, tailoring the template content to the current project.
+2.  **If [project-environment.md](mdc:docs/technical/project-environment.md) is already populated:**
+    *   Fully understand its existing content regarding this project's specific environment setup, development commands, and CI/CD pipeline.
+    *   Ensure any advice or changes you propose are consistent with this established documentation.
+3.  **When setting up local or production environments, or making changes to CI/CD:**
+    *   Refer to the (newly populated or existing) [project-environment.md](mdc:docs/technical/project-environment.md) for guidance.
+4.  **Always update [project-environment.md](mdc:docs/technical/project-environment.md):**
+    *   If you make changes to the development workflow, CI/CD pipeline, or essential environment configurations, ensure this document is updated to reflect those changes accurately.

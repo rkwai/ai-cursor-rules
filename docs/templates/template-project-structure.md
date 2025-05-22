@@ -1,139 +1,70 @@
-# Template for mono repo project structure with tests and docs included
+# Template: Opinionated Project Structure (Nx Monorepo Example)
 
-my-feature-app-monorepo/
-├── apps/                     # Contains the runnable applications (the deployables)
-│   ├── mobile/               # React Native frontend application
-│   │   ├── android/
-│   │   ├── ios/
-│   │   ├── src/
-│   │   │   ├── features/     # <<< Frontend Organized by Feature >>>
-│   │   │   │   ├── auth/     # --- Authentication Feature ---
-│   │   │   │   │   ├── components/     # + Unit Tests
-│   │   │   │   │   ├── screens/        # + Unit Tests
-│   │   │   │   │   ├── hooks/          # + Unit Tests
-│   │   │   │   │   ├── state/
-│   │   │   │   ├── products/   # --- Product Feature(s) ---
-│   │   │   │   │   ├── components/
-│   │   │   │   │   ├── screens/
-│   │   │   │   │   └── ...
-│   │   │   │   └── ... (other features like 'cart', 'profile')
-│   │   │   ├── core/         # Core app elements (UI, Nav, State) + Unit Tests
-│   │   │   ├── config/
-│   │   │   ├── assets/
-│   │   │   └── App.tsx
-│   │   ├── tests/            # App-specific integration tests
-│   │   │   └── integration/
-│   │   ├── app.json
-│   │   ├── index.js
-│   │   └── package.json
-│   │
-│   ├── web/                  # React/Vue/Angular web frontend application
-│   │   ├── public/
-│   │   ├── src/
-│   │   │   ├── features/     # <<< Frontend Organized by Feature >>>
-│   │   │   │   ├── auth/     # --- Authentication Feature ---
-│   │   │   │   │   ├── components/     # + Unit Tests
-│   │   │   │   │   ├── pages/          # + Unit Tests
-│   │   │   │   │   ├── hooks/
-│   │   │   │   │   ├── state/
-│   │   │   │   ├── products/   # --- Product Feature(s) ---
-│   │   │   │   │   ├── components/
-│   │   │   │   │   ├── pages/
-│   │   │   │   │   └── ...
-│   │   │   │   └── ... (other features)
-│   │   │   ├── core/         # Core app elements (UI, Router, State) + Unit Tests
-│   │   │   ├── config/
-│   │   │   ├── assets/
-│   │   │   └── main.tsx
-│   │   ├── tests/            # App-specific integration tests
-│   │   │   └── integration/
-│   │   └── package.json
-│   │
-│   └── server/               # Node.js/Express backend application
-│       ├── src/
-│       │   ├── domains/      # <<< Backend Organized by Domain >>>
-│       │   │   ├── auth/     # --- Authentication Domain ---
-│       │   │   │   ├── auth.controller.ts  # + Unit Tests
-│       │   │   │   ├── auth.service.ts     # + Unit Tests
-│       │   │   │   ├── auth.routes.ts      # Defines API endpoints for this domain
-│       │   │   │   ├── auth.dto.ts         # (Often uses shared types)
-│       │   │   │   └── README.md         # Domain-specific Docs (overview, rules)
-│       │   │   ├── products/   # --- Product Domain ---
-│       │   │   │   ├── products.controller.ts
-│       │   │   │   ├── products.service.ts
-│       │   │   │   ├── products.model.ts   # Database model/schema
-│       │   │   │   ├── products.routes.ts
-│       │   │   │   └── ...
-│       │   │   ├── orders/     # --- Order Domain ---
-│       │   │   │   ├── orders.controller.ts
-│       │   │   │   ├── orders.service.ts
-│       │   │   │   ├── orders.model.ts
-│       │   │   │   └── ...
-│       │   │   └── ... (other domains like 'users', 'inventory')
-│       │   ├── core/         # Core backend setup (Middleware, DB Conn) + Unit Tests
-│       │   ├── config/
-│       │   └── server.ts     # Main server entry point
-│       ├── tests/            # App-specific integration tests
-│       │   └── integration/
-│       └── package.json
-│
-├── packages/                 # Shared code/libraries used across apps/other packages
-│   ├── shared-types/         # Types often align with Domains + Unit Tests
-│   │   ├── src/
-│   │   │   ├── index.ts
-│   │   │   ├── common.types.ts
-│   │   │   ├── auth.types.ts
-│   │   │   ├── product.types.ts
-│   │   │   └── order.types.ts
-│   │   └── package.json
-│   ├── validation/           # Validation often aligns with Domains + Unit Tests
-│   │   ├── src/
-│   │   │   ├── index.ts
-│   │   │   ├── auth.schema.ts
-│   │   │   ├── product.schema.ts
-│   │   │   └── order.schema.ts
-│   │   └── package.json
-│   └── ... (other shared packages)
-│
-├── tests/                    # <<< Top-level End-to-End (E2E) tests >>>
+This template illustrates an opinionated project structure based on an Nx monorepo, incorporating principles like hexagonal architecture, domain-driven design for the backend, and feature-sliced organization for frontends. It aligns with the concepts discussed in `template-testing-strategy.md` and `template-tech-stack.md`.
+
+Use this as a reference or starting point if your project adopts a similar architecture. The actual, project-specific structure should be documented in `docs/technical/project-structure.md`.
+
+---
+
+## Folder & Project Layout (Nx Example)
+
+```text
+repo-root/
+├─ apps/
+│  ├─ web-portal/            # Next.js host (SSR + shell)
+│  ├─ mobile-app/            # Expo React Native
+│  ├─ mf-<feature>-remote/   # Micro‑frontend remotes (Module Federation)
+│  ├─ api-server/            # 🚀 Node (Express/Nest) gateway – complex SSR & webhooks
+│  └─ functions/             # 🚀 Firebase Cloud Functions – short‑lived tasks
+├─ libs/
+│  ├─ core/
+│  │   ├─ domain/            # Entities, value objects, aggregates
+│  │   ├─ application/       # Use‑cases, ports (interfaces)
+│  │   └─ infrastructure/    # Adapters (REST, Firebase, RN modules)
+│  ├─ ui/                    # Headless components & design tokens
+│  ├─ state/                 # Zustand stores
+│  ├─ testing/               # Test helpers, mocks, fixtures
+│  └─ scripts/               # Nx generators & tooling
+├── packages/                 # Shared code/libraries (alternative to libs or for more loosely coupled modules)
+│   ├── shared-types/
+│   │   └── ...
+│   └── validation/
+│       └── ...
+├── tests/                    # Top-level End-to-End (E2E) tests
 │   └── e2e/
-│       ├── cypress/          # Or Playwright, Detox etc.
-│       ├── fixtures/
-│       └── config/
-│
-├── docs/                           # <<< Project-level Documentation >>>
-│   ├── strategy/                   # Strategic planning and vision
-│   │   ├── business-model.md       # Product vision and long-term goals
-│   │   ├── segment.md              # Market and user segment 
-│   │   └── kpis.md                 # Success metrics and KPIs
-│   │
-│   ├── discovery/                  # Product discovery and requirements
-│   │   ├── prd.md                  # Product Requirements Document
-│   │   ├── domains.md              # Business domain definitions
-│   │   ├── features.md             # High-level user feature overview
-│   │   └── stories.md              # User stories and requirements
-│   │
-│   ├── execution/                  # Project execution and tracking
-│   │   ├── status.md               # Project status and updates
-│   │   ├── tasks.md                # Task breakdown and tracking
-│   │   └── ownership.md            # Team and individual ownership
-│   │
-│   └── technical/                  # Technical documentation
-│       ├── project-environment.md  # System architecture
-│       ├── project-structure.md    # API documentation
-│       └── testing-strategy.md     # Deployment procedures
-│
-├── tools/
-│   └── scripts/
-│
-├── .env.example
-├── .eslintignore
-├── .eslintrc.js
-├── .gitignore
-├── .prettierignore
-├── .prettierrc.js
-├── package.json              # Root package.json
-├── tsconfig.base.json
-├── tsconfig.json
-├── nx.json                   # Or lerna.json, turbo.json, etc.
-└── README.md                 # Root README
+│       ├── playwright/       # Example E2E tool for web
+│       └── detox/            # Example E2E tool for mobile
+└── docs/                     # Project-level Documentation (as copied by ai-cursor-rules)
+    ├── strategy/             # Strategic planning and vision (populated by project team)
+    │   ├── business-model.md
+    │   ├── segment.md
+    │   └── kpis.md
+    ├── discovery/            # Product discovery and requirements (populated by project team)
+    │   ├── prd.md
+    │   ├── domains.md
+    │   ├── features.md
+    │   └── stories.md
+    ├── execution/            # Project execution and tracking (populated by project team)
+    │   ├── status.md
+    │   ├── tasks.md
+    │   └── ownership.md
+    ├── technical/            # Technical documentation (project-specific, fill from templates)
+    │   ├── project-environment.md  # Describes this project's env & CI/CD
+    │   ├── project-structure.md    # Describes this project's structure & patterns (THIS IS THE TARGET DOC)
+    │   ├── testing-strategy.md     # Describes this project's testing approach
+    │   ├── tech-stack.md           # Describes this project's tech stack & ADR log
+    │   └── adr/                    # Architectural Decision Records for this project
+    │       └── ADR-001-example.md
+    └── templates/              # Standard templates provided by ai-cursor-rules (these files)
+        ├── template-project-environment.md
+        ├── template-project-structure.md # (This file itself)
+        ├── template-testing-strategy.md
+        └── template-tech-stack.md
+```
+
+> **Why a dedicated server component?** (Example Rationale)
+> Complex compliance endpoints, long‑running jobs and SSR might belong in a standalone Node service or Firebase Functions so they can scale, share domain ports and be tested in isolation. This decision should be documented in an ADR for the specific project.
+
+---
+
+This structure is an example. The specifics of how `libs/` are organized (e.g., by domain, by feature, by layer) or how `apps/` are structured internally will depend on the project's scale and team conventions. Always document your project's *actual* chosen structure in `docs/technical/project-structure.md`.
