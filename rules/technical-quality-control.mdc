@@ -77,20 +77,38 @@ Guide for maintaining code quality and consistency using established practices a
 *   **Where:**
     *   Include tests in root folder where `e2e` testing folder is at
 
+## 6. Observability and Monitoring
 
-## 6. PR (Pull Request) Preparation
+*   **What:** Ensure production readiness with proper monitoring, logging, and alerting capabilities.
+*   **When:**
+    *   During implementation of new features or services
+    *   When modifying existing production systems
+    *   Before deploying to production environments
+*   **How:**
+    *   Add appropriate logging with correlation IDs and structured data
+    *   Implement error tracking and performance monitoring
+    *   Define alert thresholds and escalation procedures
+    *   Create or update runbooks for operational procedures
+    *   Follow guidelines in [observability.md](mdc:docs/technical/observability.md)
+*   **Where:**
+    *   Include observability setup in service initialization code
+    *   Document monitoring configuration in technical documentation
+
+## 7. PR (Pull Request) Preparation
 
 *   **What:** 
     * Ensuring code changes are ready for human review before merging. 
     * Make sure tests are added based on [testing-strategy.md](mdc:docs/technical/testing-strategy.md)
     * Make sure [tasks.md](mdc:docs/execution/tasks.md) and [status.md](mdc:docs/execution/status.md) are up-to-date
+    * Ensure observability requirements are met per [observability.md](mdc:docs/technical/observability.md)
 *   **When:** Before finalizing code for a pull request.
 *   **How:**
     *   **Run all checks:** Ensure `eslint` passes with no errors.
     *   **Run all tests:** Ensure all Unit, Integration (and potentially E2E, depending on CI setup) tests pass.
+    *   **Observability validation:** Verify logging, monitoring, and alerting are properly configured for new features.
     *   **Code Clarity:** Ensure generated code is readable, follows guidelines, and includes necessary comments where logic is complex.
     *   **Self-Correction:** Review the generated code for adherence to all the above points.
 
 ---
 
-**Goal:** Apply these techniques appropriately to produce high-quality, consistent, maintainable, and well-tested TypeScript code.
+**Goal:** Apply these techniques appropriately to produce high-quality, consistent, maintainable, well-tested, and production-ready TypeScript code.

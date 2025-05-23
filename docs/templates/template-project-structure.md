@@ -48,18 +48,22 @@ repo-root/
     │   ├── status.md
     │   ├── tasks.md
     │   └── ownership.md
+    ├── production/           # Production operations and support (populated by project team)
+    │   └── support.md        # Customer support workflows and issue response
     ├── technical/            # Technical documentation (project-specific, fill from templates)
     │   ├── project-environment.md  # Describes this project's env & CI/CD
     │   ├── project-structure.md    # Describes this project's structure & patterns (THIS IS THE TARGET DOC)
     │   ├── testing-strategy.md     # Describes this project's testing approach
     │   ├── tech-stack.md           # Describes this project's tech stack & ADR log
+    │   ├── observability.md        # Describes this project's monitoring and alerting setup
     │   └── adr/                    # Architectural Decision Records for this project
     │       └── ADR-001-example.md
     └── templates/              # Standard templates provided by ai-cursor-rules (these files)
         ├── template-project-environment.md
         ├── template-project-structure.md # (This file itself)
         ├── template-testing-strategy.md
-        └── template-tech-stack.md
+        ├── template-tech-stack.md
+        └── template-observability.md
 ```
 
 > **Why a dedicated server component?** (Example Rationale)

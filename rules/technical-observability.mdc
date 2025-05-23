@@ -1,0 +1,30 @@
+---
+description: When adding observability and logs to help maintain and resolve issues better
+globs: 
+alwaysApply: false
+---
+# Observability and Monitoring Documentation
+
+## Understanding and Maintaining [observability.md](mdc:docs/technical/observability.md)
+
+1.  **Assess [observability.md](mdc:docs/technical/observability.md):**
+    *   If it is empty or contains only placeholder text, state that you will use [template-observability.md](mdc:docs/templates/template-observability.md) as a basis to document the project's specific monitoring stack, alert configurations, incident response procedures, and observability practices.
+    *   Tailor the template content to the current project. Create actual ADRs in `docs/technical/adr/` for significant observability and monitoring decisions and link them in the documentation.
+2.  **If [observability.md](mdc:docs/technical/observability.md) is already populated:**
+    *   Fully understand its existing content, including the documented monitoring tools, alert configurations, incident response procedures, and any linked ADRs.
+    *   Ensure any observability advice or changes you propose are consistent with this established documentation.
+3.  **When implementing new monitoring, alerting, or observability tools:**
+    *   A new ADR must be created in `docs/technical/adr/` detailing the decision, context, alternatives, and consequences for significant observability changes.
+    *   The [observability.md](mdc:docs/technical/observability.md) must be updated to reflect new monitoring tools, alert configurations, or incident response procedures.
+4.  **Always update relevant sections of [observability.md](mdc:docs/technical/observability.md):**
+    *   Reflect added/removed monitoring tools, updated alert thresholds, or modified incident response procedures.
+    *   When upgrading observability tools, record previous vs new configuration plus migration notes.
+5.  **Enforcement and Ownership:**
+    *   **PR Reviews:** Reviewers must reject changes to monitoring, alerting, or logging configurations unless [observability.md](mdc:docs/technical/observability.md) is updated and corresponding ADRs are created/referenced.
+    *   **CI Guardrails:** Ideally, CI would flag changes to monitoring configurations, alert rules, or logging setup if [observability.md](mdc:docs/technical/observability.md) and associated ADRs are not also updated.
+    *   **Ownership:** The Engineering Lead ensures accuracy; all contributors are responsible for updating [observability.md](mdc:docs/technical/observability.md) and creating/linking ADRs when introducing observability changes.
+
+## Creating New Observability Setup or Making Significant Changes
+
+*   If defining observability for a new project or making substantial changes, consult the guidelines and examples in [template-observability.md](mdc:docs/templates/template-observability.md) and the principles outlined in the (newly populated or existing) [observability.md](mdc:docs/technical/observability.md).
+*   Prefer comprehensive monitoring with proper alerting and incident response procedures as exemplified in the template.

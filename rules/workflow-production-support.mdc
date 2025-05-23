@@ -1,0 +1,108 @@
+---
+description: When supporting production issues
+globs: 
+alwaysApply: false
+---
+# Production Support and Customer Issue Response
+
+Establish comprehensive production support workflows to ensure rapid response to customer issues and maintain high service reliability. Effective support processes reduce customer impact and provide valuable feedback for product improvement.
+
+Fully understand [observability.md](mdc:docs/technical/observability.md) and [status.md](mdc:docs/execution/status.md) before implementing customer support workflows that integrate with monitoring and development processes.
+
+## Customer Support Integration
+
+- **Issue Triage and Classification:**
+  - Define support ticket severity levels (P0-P3) aligned with incident response procedures
+  - Create customer-facing SLA commitments for response and resolution times
+  - Implement automatic ticket routing based on issue type and severity
+  - Document escalation paths from support to engineering teams
+
+- **Support-Engineering Bridge:**
+  - Establish clear handoff procedures between customer support and engineering
+  - Create templates for technical issue reports with required diagnostic information
+  - Implement feedback loops to update documentation based on recurring support issues
+  - Train support team on basic debugging and log analysis
+
+## Production Debugging Framework
+
+- **Customer Context Preservation:**
+  - Implement user session recording and replay capabilities
+  - Maintain customer data access procedures with privacy and security controls
+  - Create customer-specific monitoring dashboards for high-value accounts
+  - Document data retention and anonymization policies for debugging purposes
+
+- **Rapid Diagnosis Tools:**
+  - Provide customer support team with real-time system health dashboards
+  - Create simplified views of key metrics and error rates
+  - Implement customer journey tracking across all touchpoints
+  - Establish feature flag controls for immediate issue mitigation
+
+## Issue Response Procedures
+
+- **Response Time Targets:**
+  - **P0 (Service Down):** Acknowledge < 15 min, Engineering engaged < 30 min
+  - **P1 (Critical Feature Broken):** Acknowledge < 1 hour, Resolution < 4 hours
+  - **P2 (Degraded Experience):** Acknowledge < 4 hours, Resolution < 24 hours
+  - **P3 (Minor Issues):** Acknowledge < 24 hours, Resolution per SLA
+
+- **Communication Protocols:**
+  - Maintain public status page with real-time service health
+  - Implement proactive customer communication for known issues
+  - Establish internal communication channels for production incidents
+  - Create templates for customer issue updates and resolution notifications
+
+## Knowledge Management
+
+- **Runbook Development:**
+  - Create customer-facing troubleshooting guides for common issues
+  - Maintain internal runbooks for complex technical problems
+  - Document workarounds and temporary fixes for known issues
+  - Establish process for converting incident learnings into preventive documentation
+
+- **Support Knowledge Base:**
+  - Maintain searchable database of resolved issues and solutions
+  - Create FAQ sections based on common customer questions
+  - Implement feedback loops to improve documentation based on support interactions
+  - Regular review and update of support materials based on product changes
+
+## Metrics and Continuous Improvement
+
+- **Support Performance Metrics:**
+  - Track CSAT (Customer Satisfaction) scores and support resolution rates
+  - Monitor support ticket volume trends and issue categorization
+  - Measure first contact resolution rate and escalation frequency
+  - Report on support team workload and capacity planning needs
+
+- **Product Improvement Feedback:**
+  - Regular support-to-product feedback sessions on recurring issues
+  - Tracking and prioritization of feature requests from customer support
+  - Analysis of support ticket patterns to identify product improvement opportunities
+  - Integration of support insights into product roadmap planning
+
+## Technology Stack Integration
+
+**For Customer Support Tools:**
+- Zendesk, Intercom, or Freshdesk for ticket management
+- LogRocket or FullStory for session replay and user experience analysis
+- Slack or Microsoft Teams for internal communication and alerting
+- Confluence or Notion for knowledge base management
+
+**For Monitoring Integration:**
+- Custom dashboards linking customer accounts to system metrics
+- Alert routing to support team for customer-impacting issues
+- Integration between support tickets and incident management systems
+- Automated customer notification systems for service disruptions
+
+## Quality Assurance
+
+- **Support Process Validation:**
+  - Regular testing of escalation procedures and response times
+  - Customer feedback collection on support experience quality
+  - Internal review of support ticket resolutions and accuracy
+  - Training program updates based on new features and common issues
+
+- **Documentation Maintenance:**
+  - Monthly review of support documentation accuracy and completeness
+  - Quarterly assessment of support process effectiveness and customer satisfaction
+  - Annual evaluation of support tools and workflow optimization
+  - Continuous improvement based on support metrics and customer feedback

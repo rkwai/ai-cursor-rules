@@ -25,7 +25,8 @@
     },
     "files": [
         "cli.js",
-        "rules/"
+        "rules/",
+        "docs/"
     ],
     "preferGlobal": true
 }

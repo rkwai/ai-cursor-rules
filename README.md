@@ -1,6 +1,31 @@
-# How to Use AI Cursor Rules CLI
+# AI Cursor Rules: Opinionated Full-Stack Development Framework
 
-This guide explains how to use the `ai-cursor-rules` CLI tool to manage and deploy your standardized Cursor AI rule configurations and associated documentation across projects. These rules cover a wide range of topics including **technical best practices, project execution, product discovery, strategic alignment, and quality control**.
+This CLI tool deploys a **comprehensive, opinionated framework** for AI-assisted software development using Cursor AI. It standardizes development practices across **technical implementation, product discovery, strategic planning, and execution** - particularly optimized for React/Next.js/Expo/Node/Firebase applications built with Nx monorepos.
+
+## 🎯 What This Framework Excels At
+
+- **🏗️ Technical Excellence**: Enforces hexagonal architecture, comprehensive testing (80% coverage), and quality gates
+- **📋 Product Discovery**: Structured PRD creation, feature definition, and user story development  
+- **🚀 Fast Development**: Opinionated tech stack eliminates decision paralysis; Nx caching accelerates builds
+- **📚 Code Maintainability**: Architectural Decision Records (ADRs), technical documentation standards, and clear ownership models
+- **🔄 Structured Execution**: Agile ceremonies, task breakdown, and progress tracking
+- **🚨 Production Excellence**: Comprehensive observability, monitoring, alerting, and incident response procedures
+- **🛠️ Issue Resolution**: Rapid diagnosis tools, customer support integration, and systematic problem-solving workflows
+
+## ⚠️ Important Considerations
+
+**This framework is highly opinionated and may not suit all teams:**
+- **Tech Stack**: Heavily optimized for React/Next.js/Expo/Node/Firebase with Nx monorepos
+- **Scope**: Focused on development practices rather than marketing, sales, or customer validation
+- **Complexity**: Better suited for medium-to-large projects; may be overkill for simple applications
+- **Learning Curve**: Requires team buy-in to hexagonal architecture and structured documentation
+
+## 🎯 Ideal For Teams That Want To:
+- Build maintainable, well-tested full-stack applications
+- Reduce technical decision fatigue with proven patterns
+- Establish clear documentation and decision-making processes
+- Scale development practices across multiple projects
+- Leverage AI assistance with consistent, high-quality guardrails
 
 ## 1. Project Structure
 
@@ -12,6 +37,8 @@ my-cursor-rules/
 │   ├── technical-general.mdc
 │   ├── technical-react.mdc
 │   ├── technical-git.mdc
+│   ├── technical-observability.mdc
+│   ├── production-support.mdc
 │   ├── execution-planning.mdc
 │   ├── discovery-prd.mdc
 │   ├── strategy-kpis.mdc
@@ -21,17 +48,21 @@ my-cursor-rules/
 │   ├── strategy/         # Strategic framework documents (project-specific)
 │   ├── discovery/        # Product discovery and definition guides (project-specific)
 │   ├── execution/        # Agile execution and team process docs (project-specific)
+│   ├── production/       # Production operations and support (project-specific)
+│   │   └── support.md        # Customer support workflows and issue response
 │   ├── technical/        # Technical guidelines (project-specific, to be filled using templates)
 │   │   ├── project-structure.md    # (placeholder for project's specific structure)
 │   │   ├── tech-stack.md           # (placeholder for project's specific tech stack & ADR log)
 │   │   ├── testing-strategy.md     # (placeholder for project's specific testing strategy)
 │   │   ├── project-environment.md  # (placeholder for project's specific environment setup)
+│   │   ├── observability.md        # (placeholder for project's specific monitoring & alerting)
 │   │   └── adr/                    # (for project's Architectural Decision Records)
 │   ├── templates/        # Opinionated templates to guide technical documentation:
 │   │   ├── template-project-structure.md
 │   │   ├── template-tech-stack.md
 │   │   ├── template-testing-strategy.md
-│   │   └── template-project-environment.md
+│   │   ├── template-project-environment.md
+│   │   └── template-observability.md
 │   └── usage.md          # Example: How to use/interpret the provided docs & rules
 ├── cli.js            # Your CLI script
 └── package.json      # Node.js package definition
