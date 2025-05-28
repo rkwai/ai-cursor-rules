@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Getting context
+- Fully understand the business and product with [workflow-product.mdc](mdc:.cursor/rules/workflow-product.mdc)
+- Fully understand the architecture and code with [workflow-engineering.mdc](mdc:.cursor/rules/workflow-engineering.mdc) and the docs in `docs/technical`
+- Fully understand what to work on with [tasks.md](mdc:docs/execution/tasks.md) and [status.md](mdc:docs/execution/status.md)
+- Before work on the next item, think as a product manager to make sure it is the next most valuable thing for the users

@@ -5,6 +5,10 @@ alwaysApply: true
 ---
 # Project Structure Documentation
 
+**Key artifact to produce/update:** [project-structure.md](mdc:docs/technical/project-structure.md)
+
+Fully understand the [tech-vision.md](mdc:docs/technical/tech-vision.md), [architecture-principles.md](mdc:docs/technical/architecture-principles.md), and [tech-stack.md](mdc:docs/technical/tech-stack.md) before you follow the below to fill out the [project-structure.md](mdc:docs/technical/project-structure.md)
+
 ## Understanding and Maintaining [project-structure.md](mdc:docs/technical/project-structure.md)
 
 1.  **Assess [project-structure.md](mdc:docs/technical/project-structure.md):**

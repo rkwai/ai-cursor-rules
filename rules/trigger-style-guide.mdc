@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Goal
+- We want to ensure posterity for our coding style and provide hints for people working on our project by updating our current guide
+- Our current guide is captured in [tech-stack.md](mdc:docs/technical/tech-stack.md), [project-structure.md](mdc:docs/technical/project-structure.md), and [project-environment.md](mdc:docs/technical/project-environment.md)
+- Look back as far as you can and in our current session and summarize the key takeaways that should be added that is not already there
+
+# Capture architecture decision
+- Once confirmed, capture the details of the implementation style changes in `docs/technical/guides`
+
+# Update main docs
+- Update [tech-stack.md](mdc:docs/technical/tech-stack.md), [project-structure.md](mdc:docs/technical/project-structure.md), and [project-environment.md](mdc:docs/technical/project-environment.md) as needed to support this style guide
+- Add/remove items in [tasks.md](mdc:docs/execution/tasks.md) and [status.md](mdc:docs/execution/status.md) as necessasry
+- Update the other docs in `docs/technical` as necessary
+
+# Instructions
+- These are core context documents for AI so they should be succinct.  Only add if valuable.

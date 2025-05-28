@@ -5,6 +5,10 @@ alwaysApply: true
 ---
 # Project Environment Documentation
 
+**Key artifact to produce/update:** [project-environment.md](mdc:docs/technical/project-environment.md)
+
+Fully understand the [tech-vision.md](mdc:docs/technical/tech-vision.md), [architecture-principles.md](mdc:docs/technical/architecture-principles.md), [tech-stack.md](mdc:docs/technical/tech-stack.md), and [project-structure.md](mdc:docs/technical/project-structure.md) before you follow the below to fill out the [project-environment.md](mdc:docs/technical/project-environment.md)
+
 ## Understanding and Maintaining [project-environment.md](mdc:docs/technical/project-environment.md)
 
 1.  **Assess [project-environment.md](mdc:docs/technical/project-environment.md):**

@@ -1,0 +1,53 @@
+---
+description: "Discovery - Plan collaboratively with Design, Engineering, and Product stakeholders."
+globs: docs/discovery/stories/*
+alwaysApply: false
+---
+# Collaborative Planning with Design and Engineering
+
+**Key artifact to produce/update:** feature docs in `/docs/discovery/features`
+
+Fully understand [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), [kpis.md](mdc:docs/strategy/kpis.md), [prd.md](mdc:docs/discovery/prd.md), domains in `/docs/discovery/domains` and features in `/docs/discovery/features`
+
+Pay extra attention to the [prd.md](mdc:docs/discovery/prd.md), domains in `/docs/discovery/domains` and features in `/docs/discovery/features` before filling out the story template for each story for every feature.  Create the story docs in `/docs/execution/stories`. 
+
+# <Story Title>  <!-- ver:YYYY-MM-DD -->
+
+> **Purpose:** Provide a single slice of value expressed as a user flow, demo steps, and BDD-style acceptance criteria so e2e tests can be automated with minimal extra docs.
+
+---
+
+## 1 · User Value  
+“As a <persona>, I <want to> so that <benefit>.”  
+
+
+---
+
+## 2 · Preconditions (Given-When-Then)
+Scenario: <Positive path>
+  Given <context>
+  When  <action>
+  Then  <observable outcome>
+
+---
+
+## 3 · User Flow (Mermaid)  
+```mermaid
+userJourney
+    title <Short flow name>
+    <Persona> => <System>: Step 1
+    <System> => <Service>: Step 2
+    <System> => <Persona>: Outcome
+```
+
+---
+
+## 4 · Domain & Services
+| Domain   | Why Touched | External Service |
+| -------- | ----------- | ---------------- |
+| <Domain> | Stores …    | Stripe (if used) |
+
+---
+
+## 5 · Notes / Open Questions
+Anything unclear or pending.

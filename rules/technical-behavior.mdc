@@ -8,11 +8,12 @@ alwaysApply: true
 ## Best Practices
 - **Provide Awareness:** Always bring awareness to best practices if you get guidance that goes against industry standards
 
-## Test Driven Development & Strategy Adherence
+## Always find information before working
+- If you need business context, search in `/docs/strategy`
+- If you need product context, search in `/docs/discovery`
+- If you need technical context, search in `/docs/technical`
 
-- **Understand Testing Strategy:**
-    - First, check [testing-strategy.md](mdc:docs/technical/testing-strategy.md). If it is empty or contains only placeholder text, state that you will use [template-testing-strategy.md](mdc:docs/templates/template-testing-strategy.md) as a general guideline for defining and implementing tests.
-    - If [testing-strategy.md](mdc:docs/technical/testing-strategy.md) is populated, fully understand and strictly adhere to this project-specific testing strategy.
-- **Add Tests Before Implementation:** Based on the understood strategy (either from the project-specific document or the template), add appropriate tests (unit, integration, E2E) *before* or *concurrently with* implementing new features or fixing bugs.
-- **Maintain Test Quality:** Ensure tests are meaningful, cover relevant cases, and follow the patterns and tools outlined in the guiding testing strategy document.
-
+## Optimize for good architecture to enable fast iterations and learning
+- Optimize for testable code
+- Then ensure observability
+- Then consider performance

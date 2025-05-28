@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Make sure the tests are passing
+- Run the tests by looking at the [project-structure.md](mdc:docs/technical/project-structure.md)
+
+# Update tasks
+- Update [tasks.md](mdc:docs/execution/tasks.md) and related story in the feature doc in `docs/execution/features` to ensure the project status is updated
+
+# Ensure important info from session is kept for posterity
+- If there are product pivots, [trigger-pivot.mdc](mdc:.cursor/rules/trigger-pivot.mdc)
+- If there are big architectural changes, [trigger-adr.mdc](mdc:.cursor/rules/trigger-adr.mdc)
+- If there are valuable lessons learned for implementation, [trigger-style-guide.mdc](mdc:.cursor/rules/trigger-style-guide.mdc)
+
+# Prepare git message
+- Look at all the staged files in git and prepare and commit message for me to copy and paste

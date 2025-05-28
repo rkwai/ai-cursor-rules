@@ -5,6 +5,10 @@ alwaysApply: false
 ---
 # Observability and Monitoring Documentation
 
+**Key artifact to produce/update:** [observability.md](mdc:docs/technical/observability.md)
+
+Fully understand the [tech-vision.md](mdc:docs/technical/tech-vision.md), [architecture-principles.md](mdc:docs/technical/architecture-principles.md), and [tech-stack.md](mdc:docs/technical/tech-stack.md) before you follow the below to fill out the [project-structure.md](mdc:docs/technical/project-structure.md)
+
 ## Understanding and Maintaining [observability.md](mdc:docs/technical/observability.md)
 
 1.  **Assess [observability.md](mdc:docs/technical/observability.md):**

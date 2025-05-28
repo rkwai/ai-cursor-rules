@@ -1,0 +1,78 @@
+---
+description: 
+globs: docs/technical/tech-vision.md
+alwaysApply: false
+---
+# Technical Vision
+
+**Key artifact to produce/update:** [tech-vision.md](mdc:docs/technical/tech-vision.md)
+
+Fully understand the business context in [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), and [kpis.md](mdc:docs/strategy/kpis.md) before filling out the details below.
+
+## Understanding and Maintaining [tech-vision.md](mdc:docs/technical/tech-vision.md)
+
+> **Purpose (≤ 25 words)** — provide a “north star” describing how technology choices
+> and architectural direction enable the business/product strategy over the next
+> 2-3 years. A concise, forward-looking vision rallies engineers and orients
+> investment decisions
+
+---
+
+## 1 · Vision Statement  
+Write one crisp paragraph capturing *where* the product's technology should be in
+the ideal future state—focusing on customer impact, not tool names
+(“We empower <segment> to … by delivering a <quality> platform …”)
+
+---
+
+## 2 · Guiding Quality Attributes  
+Select up to **5** “-ilities” (e.g., *testability, observability, performance,
+scalability, security*) that will dominate design trade-offs.  
+Explain *why* each attribute matters for the business model and KPIs
+
+---
+
+## 3 · Architecture Principles  
+List 8-12 non-negotiable rules that every design & ADR must respect
+(“Bounded contexts own their data”, “All external access via ports/adapters”) 
+
+---
+
+## 4 · Strategic Objectives & Measures  
+| Objective (verb + focus) | KPI / Metric | Target Horizon |
+|--------------------------|--------------|----------------|
+| e.g., Reduce lead-time   | Cycle-time (idea→prod) | ≤ 3 days / 12 mo |
+
+Link KPIs directly to the Balanced-Scorecard in [kpis.md](mdc:docs/strategy/kpis.md)
+
+---
+
+## 5 · High-Level Technology Choices  
+Outline major bets (languages, cloud, data platforms, AI services) in bullet
+form.  Reference the **Tech Radar** quadrants (Adopt / Trial / Assess / Hold)
+for each item so readers see maturity level
+
+---
+
+## 6 · Constraints & Assumptions  
+Note regulatory, budget, or legacy-system constraints plus critical assumptions
+(e.g., “traffic x10 by Q4”, “team size ≤ 12”) that shaped the vision
+
+---
+
+## 7 · Solution Sketch (link)  
+Provide a lightweight system/context diagram (C4) stored in
+`docs/technical/vision_context.md`.  Do **not** embed large SVGs here to keep
+tokens low.
+
+---
+
+## 8 · Long-Horizon Initiatives  
+Bullet 3-5 technical features in `/docs/discovery/features` folder that move the system toward the vision (e.g., “Replace
+monolith billing with bounded context microservice”).  Each feature must reference
+an Objective/KPI above and an ADR ID once approved
+
+---
+
+**Version:** `<ver:YYYY-MM-DD>`
+

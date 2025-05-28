@@ -1,18 +1,50 @@
 ---
 description: "Discovery - Map user flows and ensure a good user experience."
-globs: docs/discovery/features.md
+globs: docs/discovery/features/*
 alwaysApply: false
 ---
-
 # Features and User Flows
 
-Fully understand the [prd.md](mdc:docs/discovery/prd.md) and map out the end-to-end user flows for each feature in [features.md](mdc:docs/discovery/features.md) to ensure a coherent and intuitive user experience. Understanding how users will navigate and interact with the product helps identify gaps and refine requirements before development.
+**Key artifact to produce/update:** [features.md](mdc:docs/discovery/features.md)
 
-- **Visualize key user journeys:** Diagram or storyboard the steps a user takes to accomplish core tasks (e.g. onboarding, completing a primary task, error recovery).
-- **Identify touchpoints and decisions:** For each flow, mark all user actions, system responses, and decision points to ensure no scenario is overlooked.
-- **Optimize for simplicity:** Verify that each user flow is as simple and frictionless as possible; remove unnecessary steps and clarify any potentially confusing interactions.
-- **Collaborate on UX design:** Work closely with UX/UI designers to create wireframes or prototypes for these flows, aligning on how the product will look and feel for each step.
-- **Validate flows with users:** If possible, conduct quick user testing or stakeholder walkthroughs of the proposed flows and prototypes to catch usability issues early.
-- **Update requirements as needed:** Refine the product requirements based on feedback from flow reviews, ensuring the documentation stays aligned with the envisioned user experience.
-- **Diagram flows:** Include mermaid.js diagrams for each feature.
+Fully understand [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), [kpis.md](mdc:docs/strategy/kpis.md), [prd.md](mdc:docs/discovery/prd.md) and [domains.md](mdc:docs/discovery/domains.md).
+
+Pay extra attention to the [prd.md](mdc:docs/discovery/prd.md) and [domains.md](mdc:docs/discovery/domains.md) before filling out the template for each of the features.  Create the feature docs in `/docs/discovery/features`.
+
+# <Feature Name>  <!-- ver:YYYY-MM-DD -->
+
+> **Goal:** Detail the WHAT & WHY of this feature so designers and engineers can craft Press-Release/FAQ drafts and map domains.  
+> Follow good-strategy practice (value + KPI link) and agile user-story mapping
+
+---
+
+## 1 · User Value  
+In one sentence, describe the benefit or pain relief this feature provides to the target persona or segment.  
+*Tip:* Pull exact pain/gain wording from `market_user_segment.md`.
+
+---
+
+## 2 · Business KPI Alignment  
+Reference the Balanced-Scorecard KPI(s) this feature moves.  
+| Perspective | KPI | Target Change | Rationale |
+|-------------|-----|---------------|-----------|
+| Customer | e.g., Activation % | +8 pp | Enables 1-click onboarding |
+
+---
+
+## 3 · Core Business Domain  
+Name the Domain-Driven Design bounded context this feature lives in (or creates).  
+*Example:* **Observability**, **Billing**
+
+### External Services  
+List 3rd-party APIs, SAAS, or internal microservices the feature will call.  
+*Keep names only; detailed contracts live elsewhere.*
+
+### Domain Dependencies
+
+---
+
+## 4 · Capability Stories (High-Level)  
+Describe the minimal set of capabilities that express the feature.  
+
 

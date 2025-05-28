@@ -6,14 +6,12 @@ alwaysApply: false
 
 # Agile Execution and Ceremonies
 
-Execute development in iterative sprints and leverage Agile ceremonies to keep the team aligned, informed, and continuously improving. Structured rituals help maintain a steady development cadence and allow for regular course corrections.
+**Key artifact to produce/update:** [tasks.md](mdc:docs/execution/tasks.md)
 
-Fully understand the [stories.md](mdc:docs/discovery/stories.md) to create tasks in [tasks.md](mdc:docs/execution/tasks.md) only if the story is complex enough where tasks are warranted. 
+Fully understand business context in `/docs/discovery` and the technical context in `/docs/technical`.
 
-- **Backlog refinement:** Continuously groom the product backlog (with the product owner and team) to clarify requirements and prioritize tasks, ensuring the team always has well-defined work items.
-- **Sprint planning:** At the start of each sprint, collaboratively select a realistic set of user stories or tasks, and make sure each team member understands the acceptance criteria and expected outcomes.
-- **Daily stand-ups:** Hold short daily stand-up meetings (15 minutes) where each team member shares what they did yesterday, what they'll do today, and any blockers, so the team can synchronize and help each other.
-- **Sprint review/demos:** End each sprint with a review meeting to demo completed work to stakeholders and the team, gathering feedback and celebrating achievements.
-- **Retrospectives:** After each sprint, facilitate a retrospective for the team to discuss what went well, what didn't, and agree on concrete actions to improve next sprint's process or practices.
-- **Adapt based on insights:** Use the outcomes of reviews and retrospectives to adjust the backlog, project plans, or team practices, ensuring the execution process remains responsive to findings and team needs.
+Pay extra attention to the [prd.md](mdc:docs/discovery/prd.md), domains in `/docs/discovery/domains`, the specific feature you are working (found in `/docs/discovery/features`), and specific story you are working on (found in `/docs/execution/stories`) before filling out the [tasks.md](mdc:docs/execution/tasks.md).
 
+For technical understanding, pay extra attention to [architecture-principles.md](mdc:docs/technical/architecture-principles.md), [tech-stack.md](mdc:docs/technical/tech-stack.md), [project-structure.md](mdc:docs/technical/project-structure.md) and [project-environment.md](mdc:docs/technical/project-environment.md)
+
+You should only only have stories that are actively worked on in [tasks.md](mdc:docs/execution/tasks.md).  For completed stories, update the story accordingly in `/docs/execution/stories` and it's feature doc `/docs/discovery/features`

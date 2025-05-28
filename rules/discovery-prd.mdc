@@ -3,17 +3,42 @@ description: "Discovery - Write a clear product definition and requirements docu
 globs: docs/discovery/prd.md
 alwaysApply: false
 ---
-
 # Product Definition and Requirements Clarity
 
-Provide a clear and detailed definition of the product to guide the team during development. A well-crafted product definition (often as a Product Requirements Document) ensures everyone understands the problem being solved, the proposed solution, and what features will be delivered.
+**Key artifact to produce/update:** [prd.md](mdc:docs/discovery/prd.md)
 
 Fully understand [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), and [kpis.md](mdc:docs/strategy/kpis.md) before building the PRD.
 
-- **State the problem and vision:** Begin the document with a brief of the user problem or need and the product vision for addressing it in [prd.md](mdc:docs/discovery/prd.md).
-- **Outline key features and scope:** List the product's primary features or use cases, highlighting what is in scope (and out of scope) for the initial release.
-- **Identify key business domains needed:** List the business domains needed to build the product in [domains.md](mdc:docs/discovery/domains.md)  
-- **Detail requirements and user stories:** For each feature, write specific requirements or user stories with acceptance criteria in [features.md](mdc:docs/discovery/features.md) so that design and engineering know exactly what to build.
-- **Include constraints and assumptions:** Note any technical constraints, dependencies, or assumptions (e.g. platforms, performance needs, compliance requirements) that affect the solution.
-- **Review with the team:** Walk through the product definition with design and engineering in a meeting to ensure clarity, feasibility, and shared understanding before development starts.
+# Product Requirements Document  <!-- ver:YYYY-MM-DD -->
+
+> **Purpose:** Translate our Strategy + Business Model into an actionable, testable feature set that enables a future press-release/FAQ draft (see Amazon “Working Backwards”) and Domain-Driven Design scoping. Keep ≤ 700 words for full-file AI ingestion.
+
+---
+
+## 1 · Context  
+Summarize the opportunity in ≤ 3 sentences: customer pain, strategic fit, and success vision.
+
+---
+
+## 2 · Goals & Success Metrics  
+- List goals (e.g., “Increase self-serve activations”).  
+- For each, add a measurable KPI + target value (pulled from Balanced Scorecard).  
+Example table:
+
+| Goal | KPI | Target | Source |
+|------|-----|--------|--------|
+| Boost activation | Activation % | ≥ 30 % | analytics |
+
+---
+
+## 3 · Target Personas / Segments  
+Reference the personas or market segments this release serves.  
+- Persona A — key job, pain.  
+- Persona B — …  
+
+---
+
+## 4 · High-Level Features & Scope  
+State each major capability in one line; tag with priority (MVP / vNext).  
+
 

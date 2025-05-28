@@ -5,21 +5,22 @@ alwaysApply: true
 ---
 # Tech-Stack Governance
 
+**Key artifact to produce/update:** [tech-stack.md](mdc:docs/technical/tech-stack.md)
+
+Fully understand the [tech-vision.md](mdc:docs/technical/tech-vision.md) and [architecture-principles.md](mdc:docs/technical/architecture-principles.md) before you follow the below to fill out the [tech-stack.md](mdc:docs/technical/tech-stack.md)
+
 ## Understanding and Maintaining [tech-stack.md](mdc:docs/technical/tech-stack.md)
 
 1.  **Assess [tech-stack.md](mdc:docs/technical/tech-stack.md):**
     *   If it is empty or contains only placeholder text, state that you will use [template-tech-stack.md](mdc:docs/templates/template-tech-stack.md) as a basis to document the project's specific libraries, tools, frameworks, infrastructure choices, and to establish a Decision Log.
     *   Tailor the template content to the current project. Create actual ADRs in `docs/technical/adr/` for initial significant decisions and link them in the Decision Log section.
 2.  **If [tech-stack.md](mdc:docs/technical/tech-stack.md) is already populated:**
-    *   Fully understand its existing content, including the documented stack and the Decision Log with links to ADRs in `docs/technical/adr/`.
+    *   Fully understand its existing content, including the documented stack and [architecture-principles.md](mdc:docs/technical/architecture-principles.md).
     *   Ensure any advice or changes you propose are consistent with this established documentation.
-3.  **When an architectural or infrastructure decision is made:**
-    *   A new ADR must be created in `docs/technical/adr/` detailing the decision, context, alternatives, and consequences.
-    *   The **Decision Log** section within [tech-stack.md](mdc:docs/technical/tech-stack.md) must be updated to summarize the decision and link to the new ADR.
-4.  **Always update relevant sections of [tech-stack.md](mdc:docs/technical/tech-stack.md):**
+3.  **Always update relevant sections of [tech-stack.md](mdc:docs/technical/tech-stack.md):**
     *   Reflect added/removed libraries, frameworks, versions in the appropriate sections.
     *   When upgrading a core dependency, record previous vs new version plus migration notes.
-5.  **Enforcement and Ownership:**
+4.  **Enforcement and Ownership:**
     *   **PR Reviews:** Reviewers must reject changes to infrastructure, configuration, or code that alter the stack or architecture unless [tech-stack.md](mdc:docs/technical/tech-stack.md) is updated and a corresponding ADR is created/referenced.
     *   **CI Guardrails (Conceptual):** Ideally, CI would flag changes to key infrastructure files (Terraform, Docker, K8s, etc.) if [tech-stack.md](mdc:docs/technical/tech-stack.md) and associated ADRs are not also updated.
     *   **Ownership:** The Engineering Lead ensures accuracy; all contributors are responsible for updating [tech-stack.md](mdc:docs/technical/tech-stack.md) and creating/linking ADRs when introducing relevant changes.

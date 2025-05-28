@@ -3,14 +3,69 @@ description: "Strategy - Communicate product strategy clearly and secure resourc
 globs: docs/strategy/kpis.md
 alwaysApply: false
 ---
-
 # Strategy Communication and Resource Commitment
 
-Communicate the product vision and strategy clearly to stakeholders and team members, and secure the necessary resources to execute it. A well-communicated strategy with leadership buy-in ensures everyone is aligned and the project is properly supported.
+**Key artifact to produce/update:** [kpis.md](mdc:docs/strategy/kpis.md)
 
-- **Draft a clear strategy document:** Understand the product vision, target market, key objectives, and high-level roadmap by referencing [business-model.md](mdc:docs/strategy/business-model.md).
-- **Define required resources:** Outline the team roles, budget, and timeline needed to achieve the strategy, so leadership understands the commitment required.
-- **Hold a strategy kickoff meeting:** Present the strategy to executives and the team, answer questions, and obtain explicit buy-in on goals and resource plans.
-- **Set explicit goals and KPIs:** Communicate what success looks like (e.g. OKRs or key metrics) in [kpis.md](mdc:docs/strategy/kpis.md) so all stakeholders know how progress will be measured.
-- **Regularly update stakeholders:** Provide periodic updates (e.g. monthly or quarterly) on progress, budget usage, and any changes to strategy to maintain support and alignment in [kpis.md](mdc:docs/strategy/kpis.md).
+Fully understand the business context in [business-model.md](mdc:docs/strategy/business-model.md) and the target Customer Segment in [segment.md](mdc:docs/strategy/segment.md) before filling out the details below.
+
+# Product-Development Strategy  <!-- ver:YYYY-MM-DD -->
+
+> *Why this file exists:* Distil our product's strategic logic (Diagnosis → Guiding Policy → Coherent Actions) and tie it to concrete KPIs across the four Balanced-Scorecard perspectives. Good strategies pinpoint the key challenge, outline a clear approach, and prescribe mutually reinforcing moves.  Balanced Scorecards make those moves measurable and executable.  
+
+---
+
+## 1 · Diagnosis  <!-- core challenge -->
+Describe the single most important problem or opportunity the segment faces.  
+*Tips:* Summarise root-cause evidence from market or user research; avoid listing symptoms. (≈60 words)
+
+### Key Evidence  <!-- core challenge -->
+- Data point & source link  
+- User quote / metric justifying severity  
+
+---
+
+## 2. Guiding Policy  <!-- strategic approach -->
+State the high-level approach that will tackle the diagnosis and focus effort.  
+*Tips:* Express trade-offs (what we **won't** do) and anchoring principles.
+
+---
+
+## 3 · Coherent Actions  <!-- what to build / change -->
+List 3-5 reinforcing moves or feature themes that embody the policy.  
+Each action should map to at least one Balanced-Scorecard objective (next section).  
+
+---
+
+---
+
+## 4 · Balanced Scorecard & KPIs  <!-- concrete measures -->
+Define objectives & metrics for all four perspectives for our product
+
+| Perspective | Objective (verb + focus) | KPI | Target | Data Source |
+|-------------|--------------------------|-----|--------|-------------|
+| Financial | e.g., Grow ARR | ARR $ YoY % | T-% | billing db |
+| Customer | … | NPS / Activation % | | surveys |
+| Internal Process | … | Lead-time (idea→prod) | | CI logs |
+| Learning & Growth | … | % AI-generated PRs auto-merged | | VCS stats |
+
+*Guidance:* keep ≤ 3 objectives per perspective; targets must be time-bounded and realistic
+
+---
+
+## 5 · Assumptions & Risks  
+Log critical assumptions the strategy rests on and major risks (tech, market, resource).  
+Pair each with a mitigation or monitoring plan.
+
+---
+
+## 6 · Review Cadence  
+- **Weekly:** Auto-check KPI dashboard; flag KPI drift ±5 % over 2 periods.  
+- **Monthly:** Validate Coherent Actions against latest Segment & Canvas docs.  
+- **Quarterly:** Re-assess Diagnosis using refreshed market/competitor data.  
+Iterative cycles reflect best practice for scorecard-driven strategy execution
+
+Capture these reviews in `docs/strategy/reviews`
+
+
 

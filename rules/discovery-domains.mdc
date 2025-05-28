@@ -1,20 +1,49 @@
 ---
 description: "Discovery - Map user flows and ensure a good user experience."
-globs: docs/discovery/domains.md
+globs: docs/discovery/domains/*
 alwaysApply: false
 ---
-
 # Business Domain Definition
 
-Fully understand the [prd.md](mdc:docs/discovery/prd.md) before working with engineering to create the details of the necessary domains in [domains.md](mdc:docs/execution/domains.md).  These are self-contained backend services that owns a specific business capability behind clear, stable contracts.
+**Key artifact to prodate:** [domains.md](mdc:docs/discovery/domains.md)
 
-- **State the domain’s purpose:** Summarize the business problem it solves and why it should live in its own service.
-- **Draw domain boundaries:** List behaviours & data _inside_ versus _outside_ the domain to prevent responsibility creep.
-- **Publish the contract:** Outline REST/GraphQL endpoints _and/or_ domain events with request / response / error shapes.
-- **Model core entities & rules:** Describe aggregates, value objects, and invariants that must never be violated.
-- **Plan data persistence:** Specify storage tech, schema, indexing, retention, and backup needs aligned with usage patterns.
-- **Map cross-domain interactions:** Note upstream/downstream services, event subscriptions, idempotency, and saga/transaction patterns.
-- **Capture non-functionals:** Record targets for latency, throughput, scalability, security, compliance, logging, tracing, and alerting.
-- **Versioning & migrations:** Explain how breaking changes and data migrations will be handled safely.
-- **Define ownership & SLAs:** Name the owning team plus uptime, latency, and support commitments.
-- **Readiness checklist:** Include gates for code review, automated tests, CI/CD pipeline, and consumer-package documentation before integration.
+Fully understand [business-model.md](mdc:docs/strategy/business-model.md), [segment.md](mdc:docs/strategy/segment.md), [kpis.md](mdc:docs/strategy/kpis.md), and [prd.md](mdc:docs/discovery/prd.md)
+
+Pay extra attention to the [prd.md](mdc:docs/discovery/prd.md) before filling out the template for each of the domains.  Create the domain docs in `/docs/discovery/domains`.
+
+# <Domain Name>  <!-- ver:YYYY-MM-DD -->
+
+> *Purpose:* Establish the why, what, and how of this business/domain context—nothing more.  
+> Keep each section ≤ 2-3 bullets so the whole file stays well under 500 tokens for LLM loading.
+
+---
+
+## 1 · Domain Type  
+Core | Supporting | Generic — choose one (per Strategic DDD).
+
+---
+
+## 2 · Problem & Value  
+Describe the customer or business problem this domain solves, and the unique value it provides.
+
+---
+
+## 3 · Responsibilities  
+- Bullet key responsibilities (business rules, policies, workflows).  
+- Exclude UI/adapters—those live in app layers.
+
+---
+
+## 4 · Key Entities & Aggregate Roots  
+| Entity | Purpose | Notes |
+|--------|---------|-------|
+| ExampleEntity | Encapsulates X rule | Aggregated by Y |
+
+*(Add only entities critical for domain language recognition.)*
+
+---
+
+## 5 · Public Interfaces (Ports)  
+List the commands/queries/events other domains may call or subscribe to.  
+ 
+

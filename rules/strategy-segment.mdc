@@ -3,15 +3,39 @@ description: "Strategy - Identify target audience segments and their needs."
 globs: docs/strategy/segment.md
 alwaysApply: false
 ---
-
 # Target Audience and User Needs
 
-Clearly identify who the product is for and what problems it solves for them. Understanding the target audience ensures the product strategy focuses on delivering real value to the right users.
+**Key artifact to produce/update:** [segment.md](mdc:docs/strategy/segment.md)
 
-- **Define user personas or segments:** Outline the key characteristics of target users (e.g. demographics, roles, behaviors) and group them into primary segments.
-- **Identify user needs and pain points:** For each persona, document their main problems, goals, and what they value in a solution.
-- **Validate with research:** Use customer interviews, surveys, or market research to confirm these needs are real and pressing for your target audience.
-- **Focus the value proposition:** Ensure the product’s value proposition in [business-model.md](mdc:docs/strategy/business-model.md) directly addresses the core needs of the target users you've identified.
-- **Prioritize audience segments:** If there are multiple user groups, prioritize which segment to serve first based on strategic value and ease of reach.
-- **Team alignment on user understanding:** Conduct a workshop or review session with the team to go over the defined personas and needs, ensuring everyone shares the same understanding of the target users and their problems.
+Fully understand the business context in [business-model.md](mdc:docs/strategy/business-model.md) and the target Customer Segment before filling out the details below.
+
+## Segment Overview  
+Describe the focal customer cluster in one sentence: who they are and what high-level outcome they seek. Homogeneous groups that respond similarly to a value prop qualify as true segments
+
+## Demographic / Firmographic Facts  
+Bullet key age, income, role, or company-size bands that materially change buying power or needs
+
+## Psychographics & Behaviors  
+Note relevant attitudes, values, interests, or usage patterns that influence adoption
+
+## Jobs-to-Be-Done  
+List top “jobs” this segment hires solutions for (functional + emotional)
+
+## Pains
+Obstacles, risks, or frustrations blocking those jobs
+
+## Gains  
+Describe desired outcomes or benefits when the job is done well
+
+## TAM / SAM / SOM  
+Estimate total, serviceable, and obtainable market sizes for this segment; include $ or #users with source
+
+## Willingness-to-Pay & Budget  
+Summarize pricing tolerance ranges or budgets based on WTP studies or benchmark pricing
+
+## Adoption Triggers & Barriers  
+Highlight events or conditions that cause purchase, plus blockers such as inertia, regulatory hurdles, or switching costs
+
+## Preferred Channels & Touch-points  
+Specify where this segment researches, evaluates, buys, and receives value (e.g., App Store, partner resellers, Slack community
 

@@ -1,0 +1,60 @@
+---
+description: 
+globs: README.md
+alwaysApply: false
+---
+<!-- =======================================================================
+README-GUIDE.md
+How to craft concise, AI-friendly README files for monorepos & sub-folders
+======================================================================= -->
+
+> **Why this guide?**  
+> A well-structured README lets *humans orient in < 90 sec* and *AI agents load the whole file without blowing the context window*. Most best-practice READMEs share six core blocks: Purpose, Quick Start, Structure, Commands, Standards, Links / Help. Monorepos or multi-package projects often need **one root README plus focused READMEs in leaf folders**: this guide shows how to write both.
+
+---
+
+## 0 · Size & Format Rules
+* ✂ **Target ≤ 150 lines / 900 tokens** so LLMs can include it with their prompt comfortably—even on 8k-token models.  
+* 📄 Use plain Markdown only; badges & fenced code are LLM-safe.  
+* 🔗 Link to deeper docs instead of embedding large tables (strategy, ADRs, etc.).
+
+---
+
+## 1 · Recommended Sections (Root README)
+
+| # | Section | Contents (1-2 lines each) | Reason |
+|---|---------|---------------------------|--------|
+| 1 | **Project Pitch** | 1-sentence value prop; key status badges. | Helps newcomers decide relevance fast |
+| 2 | **Quick Start** | Clone → install → run commands; prereqs. | 70 % of visitors look for run instructions first |
+| 3 | **Project Structure** | 5-6-line folder tree; link full map doc. | Tree saves devs from `ls -R` hunting |
+| 4 | **Core Commands** | Table of lint/test/build scripts. | Cuts context-switch for common tasks |
+| 5 | **Tech Stack & Standards** | Bullet primary langs/tools; list Cursor rules enforcing style/tests/boundaries. | AI uses this to pick libs & obey architecture |
+| 6 | **Contributing** | Branch naming, PR checklist, code-style note. | Keeps human & AI PRs consistent across org |
+| 7 | **Learning More** | Pointer links to strategy, domain map, ADRs, runbooks. | Prevents README bloat while ensuring discoverability |
+| 8 | **Maintenance Checklist** | Markdown task list reminding authors to update badges, commands, structure paths. | README rot is common in fast-moving monorepos |
+
+---
+
+## 2 · Mini-README Pattern (Sub-folders)  
+Use when `/lib/`, `/apps/server/`, or any package needs its own README.
+
+| Section | Purpose |
+|---------|---------|
+| Module Pitch | What this folder contains (e.g., “Billing Domain Core”). |
+| Setup | If extra install/env steps differ from root. |
+| Commands | Module-scoped test / build script table. |
+| Ports & Adapters | List exposed interfaces if hexagonal; link to public docs. |
+| Owner & Alerts | Slack channel / code-owner file. |
+| Depend-on | Link back to root README for global scripts. |
+
+*(Skip badges unless sub-project has its own pipeline.)*
+
+---
+
+## 3 · Multi-README Strategy in a Monorepo
+```mermaid
+flowchart TD
+    RootREADME -->|links| Docs[Detailed docs]
+    RootREADME --> LibREADME
+    RootREADME --> AppServerREADME
+    LibREADME -->|inherits commands| package.json

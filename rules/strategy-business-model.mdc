@@ -3,13 +3,34 @@ description: "Strategy - Ensure a clear business model and value proposition for
 globs: docs/strategy/business-model.md
 alwaysApply: false
 ---
-
 # Business Model and Value Proposition
 
-Define how the product will create value for both the business and the customer using the Business Model Canvas. A clear business model and value proposition align the team on why the product matters and how it will succeed.
+**Key artifact to produce/update:** [business-model.md](mdc:docs/strategy/business-model.md)
 
-- **Identify the business model:** Clarify how the product will generate revenue or achieve its goals (e.g. subscription, one-time sale, user growth for ad revenue, cost savings).
-- **Articulate the value proposition:** Describe the unique value the product offers to your ideal customer profile in [segment.md](mdc:docs/strategy/segment.md) and how it solves their pain points better than alternatives.
-- **Know your differentiation:** Specify what sets your product apart in the market (unique features, pricing, quality) to ensure the value proposition is compelling.
-- **Set success metrics:** Define how success is measured (e.g. revenue targets, user engagement, retention) and tie these metrics to the business model and value delivered.
-- **Document and share:** Summarize the business model and value proposition in your strategy brief or canvas in [business-model.md](mdc:docs/strategy/business-model.md), and review it with stakeholders for alignment.
+## Customer Segments  
+Identify the distinct user or buyer groups you intend to serve; note their key jobs, pains, and gains so later boxes stay grounded in real needs.
+
+## Value Propositions  
+State the core bundle of products/services that uniquely solve those jobs or pains and deliver gains—why customers choose you over alternatives.
+
+## Channels  
+List the main touch-points (owned, partner, digital, physical) through which value is delivmmunication, sales, and support occur.  
+
+## Customer Relationships  
+Describe the nature of interaction each segment expects (personalized, self-service, community, automated) and how you’ll nurture loyalty or upsell.
+
+## Revenue Streams  
+Specify how each segment generates cash—pricing model, one-off sales, subscription, usage fees, licensing, ads, etc.—and key metrics (LTV, ARPU). 
+
+## Key Resorce 
+Crucial assets (people, IP, data, capital, brand, infra) required to craft and deliver the value proposition and run channels/relationships.
+
+## Key Activities  
+Capture the most important actions the business must perform (product development, marketing, sales, ops, platform maintenance) to create value.  
+
+## Key Partnerships  
+Note suppliers, platforms, or allies that let you access resources, reach markets, reduce risk, or streamline cost—highlight mutual benefit. 
+
+## Cost Structure  
+Summarize the biggest cost drivers tied to activities, resources, and partners; indicate fixed vs. variable and where economies of scale can emerge.
+

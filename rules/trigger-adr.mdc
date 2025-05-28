@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Goal
+- We want to ensure posterity for our architecture by creating an ADR (architecture decision record) and updating our current architecture specs
+- Our current guide is captured in [architecture-principles.md](mdc:docs/technical/architecture-principles.md), [tech-stack.md](mdc:docs/technical/tech-stack.md), [project-structure.md](mdc:docs/technical/project-structure.md), and [project-environment.md](mdc:docs/technical/project-environment.md)
+- Look back as far as you can and in our conversation and summarize the key takeaways that should be added that is not already there
+
+# Capture architecture decision
+- Once confirmed, capture the details of the architectural change and/or direction in `docs/technical/adr`
+
+# Update main docs
+- Update [tech-stack.md](mdc:docs/technical/tech-stack.md), [project-structure.md](mdc:docs/technical/project-structure.md), and [project-environment.md](mdc:docs/technical/project-environment.md) as needed to support this ADR
+- Add/remove items in [tasks.md](mdc:docs/execution/tasks.md) and [status.md](mdc:/Users/rickwong/Documents/GitHub/ai-cursor-rules/docs/execution/status.md) as necessasry
+- Update the other docs in `docs/technical` as necessary
+
+# Instructions
+- These are core context documents for AI so they should be succinct.  Only add if valuable.

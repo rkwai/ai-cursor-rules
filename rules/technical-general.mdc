@@ -16,6 +16,7 @@ alwaysApply: true
 - Keep lines reasonably short (e.g., under 100-120 characters) for readability.
 - Use Prettier or an established project linter/formatter if available. If generating code, try to match the surrounding style.
 - Avoid commented-out code blocks; remove unused code.
+- Aim to keep files under 200 lines
 
 ## Comments
 - Write comments to explain the *why*, not the *what*. Explain complex logic, assumptions, or the purpose behind a non-obvious piece of code.

@@ -1,0 +1,72 @@
+---
+description: 
+globs: docs/technical/architecture-principles.md
+alwaysApply: false
+---
+<!-- =======================================================================
+architecture_principles.md   (Version: <YYYY-MM-DD>)
+Define 8-12 short, memorable rules that guide all technical decisions.
+Size target ≤ 400 tokens so LLMs can load entire file with prompts.
+=========================================================================== -->
+
+**Key artifact to produce/update:** [architecture-principles.md](mdc:docs/technical/architecture-principles.md)
+
+Fully understand the technical vision in [tech-vision.md](mdc:docs/technical/tech-vision.md) before filling out the details below.
+
+# Architecture Principles
+
+> **Purpose** - Provide clear, stable guard-rails so every design, ADR, or PR
+> aligns with our long-term technical vision and business KPIs.
+
+---
+
+## How to use this file
+1. **Read before you design** — check each principle when drafting ADRs or code.  
+2. **Cite principle IDs** in ADR “Decision” or PR description (e.g., *“Aligns with AP-3”*).  
+3. **Update carefully** — adjust only via ADR, since principles are durable rules, not trends.  
+4. **Keep ≤ 12 principles**; merge or delete before adding new ones to avoid dilution
+
+---
+
+## Template per Principle
+| Field | Guidance |
+|-------|----------|
+| **ID** | `AP-<#>` sequential. |
+| **Name** | 2-5 word slogan (*“Ports Over Adapters”*). |
+| **Statement** | One sentence: *“We <what> so that <why>.”* |
+| **Rationale** | 1-2 bullets linking to quality attributes or KPI. |
+| **Implications** | Bullet constraints or trade-offs teams must respect. |
+
+---
+
+## Principles
+
+| ID | Name | Statement | Rationale | Implications |
+|----|------|-----------|-----------|--------------|
+| AP-1 | **Separation of Concerns** | We isolate UI, domain, and infra code to reduce coupling. | • Speeds testing<br>• Enables parallel teams | • Enforce hexagonal boundaries via rule `hex_boundary.mdc` |
+| AP-2 | **Design for Failure** | We expect and gracefully handle component failures. | • Improves uptime KPI<br>• Enables self-healing | • Use retries + circuit breakers<br>• Chaos tests in CI |
+| AP-3 | **Self-Describing APIs** | All service contracts must be machine-readable (OpenAPI/GraphQL SDL). | • Generates SDKs<br>• AI can reason about interfaces | • PR rejected if contract lacks schema |
+| AP-4 | **Observable by Default** | Every deployable emits structured logs, metrics, traces. | • Cuts MTTR KPI<br>• Informs product analytics | • Budget 5 % CPU for telemetry |
+| AP-5 | **Automate Everything** | Build, test, deploy pipelines run without manual gates. | • Shrinks lead time KPI | • All infra via IaC<br>• PR merges only after green CI |
+| AP-6 | **Performance Budgets** | Features may not regress p95 latency > 10 %. | • Protects user UX KPI | • Perf tests in pipeline<br>• Alerts on budget breach |
+| AP-7 | **Secure by Design** | Least-privilege defaults; data encrypted in transit & at rest. | • Meets trust pillar | • Threat model review mandatory for new domains |
+| AP-8 | **Reuse-Before-Build** | Prefer adopting proven libs/services over custom code. | • Speeds delivery<br>• Reduces maintenance | • Check Tech Radar quadrant before coding |
+
+*(Add or rename principles as needed; keep table short.)*
+
+---
+
+## Maintenance & Review
+- **Quarterly** - Architect AI reviews usage; retire unused or redundant principles.  
+- **Event-Driven** - Major strategy pivot → revisit principles to ensure continued fit.  
+- **Change Process** - Update via ADR (`/adr/NNN-*.md`), citing impacted principles.
+- **If [architecture-principles.md](mdc:docs/technical/architecture-principles.md) is updated:**
+    *   Fully understand its existing content, including the [tech-stack.md](mdc:docs/technical/tech-stack.md) and the Decision Log with links to ADRs in `docs/technical/adr/`.
+- **When an architectural or infrastructure decision is made:**
+    *   A new ADR must be created in `docs/technical/adr/` detailing the decision, context, alternatives, and consequences.
+    *   The **Decision Log** section within [architecture-principles.md](mdc:docs/technical/architecture-principles.md) must be updated to summarize the decision and link to the new ADR.
+- **Always update relevant sections of [tech-stack.md](mdc:docs/technical/tech-stack.md)**
+    *   Reflect added/removed libraries, frameworks, versions in the appropriate sections.
+    *   When upgrading a core dependency, record previous vs new version plus migration notes.
+
+---
